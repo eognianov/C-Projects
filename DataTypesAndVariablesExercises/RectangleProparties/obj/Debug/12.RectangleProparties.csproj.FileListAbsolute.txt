@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\RectangleProparties\bin\Debug\RectangleProparties.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\RectangleProparties\bin\Debug\RectangleProparties.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\RectangleProparties\bin\Debug\RectangleProparties.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\RectangleProparties\obj\Debug\12.RectangleProparties.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\RectangleProparties\obj\Debug\12.RectangleProparties.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\RectangleProparties\obj\Debug\RectangleProparties.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\RectangleProparties\obj\Debug\RectangleProparties.pdb

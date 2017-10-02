@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\TheatrePromotions\bin\Debug\TheatrePromotions.exe.config
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\TheatrePromotions\bin\Debug\TheatrePromotions.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\TheatrePromotions\bin\Debug\TheatrePromotions.pdb
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\TheatrePromotions\obj\Debug\06.TheatrePromotions.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\TheatrePromotions\obj\Debug\06.TheatrePromotions.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\TheatrePromotions\obj\Debug\TheatrePromotions.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\TheatrePromotions\obj\Debug\TheatrePromotions.pdb

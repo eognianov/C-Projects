@@ -1,0 +1,6 @@
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\NumberChecker\obj\Debug\12.NumberChecker.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\NumberChecker\bin\Debug\NumberChecker.exe.config
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\NumberChecker\bin\Debug\NumberChecker.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\NumberChecker\bin\Debug\NumberChecker.pdb
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\NumberChecker\obj\Debug\NumberChecker.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\NumberChecker\obj\Debug\NumberChecker.pdb

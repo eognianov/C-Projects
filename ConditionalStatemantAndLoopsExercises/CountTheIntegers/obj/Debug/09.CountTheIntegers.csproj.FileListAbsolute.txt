@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CountTheIntegers\bin\Debug\CountTheIntegers.exe.config
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CountTheIntegers\bin\Debug\CountTheIntegers.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CountTheIntegers\bin\Debug\CountTheIntegers.pdb
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CountTheIntegers\obj\Debug\09.CountTheIntegers.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CountTheIntegers\obj\Debug\09.CountTheIntegers.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CountTheIntegers\obj\Debug\CountTheIntegers.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CountTheIntegers\obj\Debug\CountTheIntegers.pdb

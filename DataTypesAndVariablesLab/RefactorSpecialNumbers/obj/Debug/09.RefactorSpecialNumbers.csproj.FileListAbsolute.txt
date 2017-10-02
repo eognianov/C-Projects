@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\RefactorSpecialNumbers\bin\Debug\RefactorSpecialNumbers.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\RefactorSpecialNumbers\bin\Debug\RefactorSpecialNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\RefactorSpecialNumbers\bin\Debug\RefactorSpecialNumbers.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\RefactorSpecialNumbers\obj\Debug\09.RefactorSpecialNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\RefactorSpecialNumbers\obj\Debug\09.RefactorSpecialNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\RefactorSpecialNumbers\obj\Debug\RefactorSpecialNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\RefactorSpecialNumbers\obj\Debug\RefactorSpecialNumbers.pdb

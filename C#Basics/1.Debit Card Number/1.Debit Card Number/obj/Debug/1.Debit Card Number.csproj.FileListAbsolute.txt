@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\1.Debit Card Number\1.Debit Card Number\bin\Debug\1.Debit Card Number.exe.config
+C:\Users\Emilian Ognianov\source\repos\1.Debit Card Number\1.Debit Card Number\bin\Debug\1.Debit Card Number.exe
+C:\Users\Emilian Ognianov\source\repos\1.Debit Card Number\1.Debit Card Number\bin\Debug\1.Debit Card Number.pdb
+C:\Users\Emilian Ognianov\source\repos\1.Debit Card Number\1.Debit Card Number\obj\Debug\1.Debit Card Number.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\1.Debit Card Number\1.Debit Card Number\obj\Debug\1.Debit Card Number.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\1.Debit Card Number\1.Debit Card Number\obj\Debug\1.Debit Card Number.exe
+C:\Users\Emilian Ognianov\source\repos\1.Debit Card Number\1.Debit Card Number\obj\Debug\1.Debit Card Number.pdb

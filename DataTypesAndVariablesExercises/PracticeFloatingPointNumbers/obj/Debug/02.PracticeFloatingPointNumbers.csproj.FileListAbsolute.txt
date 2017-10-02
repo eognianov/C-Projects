@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeFloatingPointNumbers\bin\Debug\PracticeFloatingPointNumbers.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeFloatingPointNumbers\bin\Debug\PracticeFloatingPointNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeFloatingPointNumbers\bin\Debug\PracticeFloatingPointNumbers.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeFloatingPointNumbers\obj\Debug\02.PracticeFloatingPointNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeFloatingPointNumbers\obj\Debug\02.PracticeFloatingPointNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeFloatingPointNumbers\obj\Debug\PracticeFloatingPointNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeFloatingPointNumbers\obj\Debug\PracticeFloatingPointNumbers.pdb

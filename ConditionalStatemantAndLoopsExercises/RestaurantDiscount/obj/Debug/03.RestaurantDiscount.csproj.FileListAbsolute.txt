@@ -1,0 +1,6 @@
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\RestaurantDiscount\bin\Debug\RestaurantDiscount.exe.config
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\RestaurantDiscount\bin\Debug\RestaurantDiscount.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\RestaurantDiscount\bin\Debug\RestaurantDiscount.pdb
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\RestaurantDiscount\obj\Debug\03.RestaurantDiscount.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\RestaurantDiscount\obj\Debug\RestaurantDiscount.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\RestaurantDiscount\obj\Debug\RestaurantDiscount.pdb

@@ -1,0 +1,6 @@
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TriangleOfNumbers\bin\Debug\TriangleOfNumbers.exe.config
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TriangleOfNumbers\bin\Debug\TriangleOfNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TriangleOfNumbers\bin\Debug\TriangleOfNumbers.pdb
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TriangleOfNumbers\obj\Debug\10.TriangleOfNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TriangleOfNumbers\obj\Debug\TriangleOfNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TriangleOfNumbers\obj\Debug\TriangleOfNumbers.pdb

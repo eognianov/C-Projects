@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TestNumbers\bin\Debug\TestNumbers.exe.config
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TestNumbers\bin\Debug\TestNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TestNumbers\bin\Debug\TestNumbers.pdb
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TestNumbers\obj\Debug\12.TestNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TestNumbers\obj\Debug\12.TestNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TestNumbers\obj\Debug\TestNumbers.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\TestNumbers\obj\Debug\TestNumbers.pdb

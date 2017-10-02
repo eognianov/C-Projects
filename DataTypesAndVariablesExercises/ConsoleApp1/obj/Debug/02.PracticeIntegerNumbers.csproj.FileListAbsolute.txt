@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConsoleApp1\obj\Debug\02.PracticeIntegerNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConsoleApp1\obj\Debug\02.PracticeIntegerNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

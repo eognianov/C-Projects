@@ -1,0 +1,6 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VariableInHexFormat\bin\Debug\VariableInHexFormat.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VariableInHexFormat\bin\Debug\VariableInHexFormat.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VariableInHexFormat\bin\Debug\VariableInHexFormat.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VariableInHexFormat\obj\Debug\04.VariableInHexFormat.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VariableInHexFormat\obj\Debug\VariableInHexFormat.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VariableInHexFormat\obj\Debug\VariableInHexFormat.pdb

@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\DifferentIntegersSize\bin\Debug\DifferentIntegersSize.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\DifferentIntegersSize\bin\Debug\DifferentIntegersSize.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\DifferentIntegersSize\bin\Debug\DifferentIntegersSize.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\DifferentIntegersSize\obj\Debug\18.DifferentIntegersSize.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\DifferentIntegersSize\obj\Debug\18.DifferentIntegersSize.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\DifferentIntegersSize\obj\Debug\DifferentIntegersSize.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\DifferentIntegersSize\obj\Debug\DifferentIntegersSize.pdb

@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\CenturiesToMinutes\bin\Debug\CenturiesToMinutes.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\CenturiesToMinutes\bin\Debug\CenturiesToMinutes.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\CenturiesToMinutes\bin\Debug\CenturiesToMinutes.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\CenturiesToMinutes\obj\Debug\01.CenturiesToMinutes.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\CenturiesToMinutes\obj\Debug\01.CenturiesToMinutes.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\CenturiesToMinutes\obj\Debug\CenturiesToMinutes.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\CenturiesToMinutes\obj\Debug\CenturiesToMinutes.pdb

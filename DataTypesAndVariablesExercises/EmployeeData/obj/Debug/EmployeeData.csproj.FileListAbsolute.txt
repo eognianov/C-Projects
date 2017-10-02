@@ -1,0 +1,6 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\EmployeeData\bin\Debug\EmployeeData.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\EmployeeData\bin\Debug\EmployeeData.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\EmployeeData\bin\Debug\EmployeeData.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\EmployeeData\obj\Debug\EmployeeData.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\EmployeeData\obj\Debug\EmployeeData.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\EmployeeData\obj\Debug\EmployeeData.pdb

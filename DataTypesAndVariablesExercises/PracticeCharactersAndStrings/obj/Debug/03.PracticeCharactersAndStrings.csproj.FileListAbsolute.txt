@@ -1,0 +1,6 @@
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeCharactersAndStrings\bin\Debug\PracticeCharactersAndStrings.exe.config
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeCharactersAndStrings\bin\Debug\PracticeCharactersAndStrings.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeCharactersAndStrings\bin\Debug\PracticeCharactersAndStrings.pdb
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeCharactersAndStrings\obj\Debug\03.PracticeCharactersAndStrings.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeCharactersAndStrings\obj\Debug\PracticeCharactersAndStrings.exe
+C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PracticeCharactersAndStrings\obj\Debug\PracticeCharactersAndStrings.pdb

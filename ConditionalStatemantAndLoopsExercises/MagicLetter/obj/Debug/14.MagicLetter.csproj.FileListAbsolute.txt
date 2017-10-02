@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\MagicLetter\bin\Debug\MagicLetter.exe.config
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\MagicLetter\bin\Debug\MagicLetter.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\MagicLetter\bin\Debug\MagicLetter.pdb
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\MagicLetter\obj\Debug\14.MagicLetter.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\MagicLetter\obj\Debug\14.MagicLetter.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\MagicLetter\obj\Debug\MagicLetter.exe
+C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\MagicLetter\obj\Debug\MagicLetter.pdb

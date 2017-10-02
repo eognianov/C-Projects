@@ -1,0 +1,7 @@
+C:\Users\Emilian Ognianov\source\repos\2.Add two numbers\2.Add two numbers\bin\Debug\2.Add two numbers.exe.config
+C:\Users\Emilian Ognianov\source\repos\2.Add two numbers\2.Add two numbers\bin\Debug\2.Add two numbers.exe
+C:\Users\Emilian Ognianov\source\repos\2.Add two numbers\2.Add two numbers\bin\Debug\2.Add two numbers.pdb
+C:\Users\Emilian Ognianov\source\repos\2.Add two numbers\2.Add two numbers\obj\Debug\2.Add two numbers.csprojResolveAssemblyReference.cache
+C:\Users\Emilian Ognianov\source\repos\2.Add two numbers\2.Add two numbers\obj\Debug\2.Add two numbers.csproj.CoreCompileInputs.cache
+C:\Users\Emilian Ognianov\source\repos\2.Add two numbers\2.Add two numbers\obj\Debug\2.Add two numbers.exe
+C:\Users\Emilian Ognianov\source\repos\2.Add two numbers\2.Add two numbers\obj\Debug\2.Add two numbers.pdb
