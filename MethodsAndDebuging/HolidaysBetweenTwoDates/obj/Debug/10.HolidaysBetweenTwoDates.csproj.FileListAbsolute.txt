@@ -1,0 +1,7 @@
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\bin\Debug\HolidaysBetweenTwoDates.exe.config
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\bin\Debug\HolidaysBetweenTwoDates.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\bin\Debug\HolidaysBetweenTwoDates.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\obj\Debug\10.HolidaysBetweenTwoDates.csprojResolveAssemblyReference.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\obj\Debug\10.HolidaysBetweenTwoDates.csproj.CoreCompileInputs.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\obj\Debug\HolidaysBetweenTwoDates.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\obj\Debug\HolidaysBetweenTwoDates.pdb

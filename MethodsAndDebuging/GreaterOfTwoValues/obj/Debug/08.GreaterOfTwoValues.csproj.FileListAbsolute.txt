@@ -1,0 +1,6 @@
+F:\OneDrive\C# Projects\MethodsAndDebuging\GreaterOfTwoValues\bin\Debug\GreaterOfTwoValues.exe.config
+F:\OneDrive\C# Projects\MethodsAndDebuging\GreaterOfTwoValues\bin\Debug\GreaterOfTwoValues.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\GreaterOfTwoValues\bin\Debug\GreaterOfTwoValues.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\GreaterOfTwoValues\obj\Debug\08.GreaterOfTwoValues.csproj.CoreCompileInputs.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\GreaterOfTwoValues\obj\Debug\GreaterOfTwoValues.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\GreaterOfTwoValues\obj\Debug\GreaterOfTwoValues.pdb

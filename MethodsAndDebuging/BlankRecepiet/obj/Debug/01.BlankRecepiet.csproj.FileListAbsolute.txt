@@ -1,0 +1,7 @@
+F:\OneDrive\C# Projects\MethodsAndDebuging\BlankRecepiet\bin\Debug\BlankRecepiet.exe.config
+F:\OneDrive\C# Projects\MethodsAndDebuging\BlankRecepiet\bin\Debug\BlankRecepiet.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\BlankRecepiet\bin\Debug\BlankRecepiet.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\BlankRecepiet\obj\Debug\01.BlankRecepiet.csprojResolveAssemblyReference.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\BlankRecepiet\obj\Debug\01.BlankRecepiet.csproj.CoreCompileInputs.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\BlankRecepiet\obj\Debug\BlankRecepiet.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\BlankRecepiet\obj\Debug\BlankRecepiet.pdb

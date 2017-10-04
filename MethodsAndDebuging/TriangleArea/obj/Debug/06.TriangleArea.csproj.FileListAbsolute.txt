@@ -1,0 +1,6 @@
+F:\OneDrive\C# Projects\MethodsAndDebuging\TriangleArea\bin\Debug\TriangleArea.exe.config
+F:\OneDrive\C# Projects\MethodsAndDebuging\TriangleArea\bin\Debug\TriangleArea.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\TriangleArea\bin\Debug\TriangleArea.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\TriangleArea\obj\Debug\06.TriangleArea.csproj.CoreCompileInputs.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\TriangleArea\obj\Debug\TriangleArea.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\TriangleArea\obj\Debug\TriangleArea.pdb

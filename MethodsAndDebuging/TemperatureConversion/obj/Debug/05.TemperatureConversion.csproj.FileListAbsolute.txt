@@ -1,0 +1,6 @@
+F:\OneDrive\C# Projects\MethodsAndDebuging\TemperatureConversion\bin\Debug\TemperatureConversion.exe.config
+F:\OneDrive\C# Projects\MethodsAndDebuging\TemperatureConversion\bin\Debug\TemperatureConversion.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\TemperatureConversion\bin\Debug\TemperatureConversion.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\TemperatureConversion\obj\Debug\05.TemperatureConversion.csproj.CoreCompileInputs.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\TemperatureConversion\obj\Debug\TemperatureConversion.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\TemperatureConversion\obj\Debug\TemperatureConversion.pdb

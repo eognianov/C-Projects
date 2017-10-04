@@ -1,0 +1,6 @@
+F:\OneDrive\C# Projects\MethodsAndDebuging\MultiplyEvensByOdds\bin\Debug\MultiplyEvensByOdds.exe.config
+F:\OneDrive\C# Projects\MethodsAndDebuging\MultiplyEvensByOdds\bin\Debug\MultiplyEvensByOdds.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\MultiplyEvensByOdds\bin\Debug\MultiplyEvensByOdds.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\MultiplyEvensByOdds\obj\Debug\09.MultiplyEvensByOdds.csproj.CoreCompileInputs.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\MultiplyEvensByOdds\obj\Debug\MultiplyEvensByOdds.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\MultiplyEvensByOdds\obj\Debug\MultiplyEvensByOdds.pdb

@@ -1,0 +1,6 @@
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\bin\Debug\HolidaysBetweenTwoDates.exe.config
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\bin\Debug\HolidaysBetweenTwoDates.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\bin\Debug\HolidaysBetweenTwoDates.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\obj\Debug\HolidaysBetweenTwoDates.csproj.CoreCompileInputs.cache
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\obj\Debug\HolidaysBetweenTwoDates.exe
+F:\OneDrive\C# Projects\MethodsAndDebuging\HolidaysBetweenTwoDates\obj\Debug\HolidaysBetweenTwoDates.pdb
