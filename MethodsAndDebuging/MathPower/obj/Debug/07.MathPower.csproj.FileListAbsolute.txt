@@ -4,3 +4,4 @@ F:\OneDrive\C# Projects\MethodsAndDebuging\MathPower\bin\Debug\MathPower.pdb
 F:\OneDrive\C# Projects\MethodsAndDebuging\MathPower\obj\Debug\07.MathPower.csproj.CoreCompileInputs.cache
 F:\OneDrive\C# Projects\MethodsAndDebuging\MathPower\obj\Debug\MathPower.exe
 F:\OneDrive\C# Projects\MethodsAndDebuging\MathPower\obj\Debug\MathPower.pdb
+F:\OneDrive\C# Projects\MethodsAndDebuging\MathPower\obj\Debug\07.MathPower.csprojResolveAssemblyReference.cache

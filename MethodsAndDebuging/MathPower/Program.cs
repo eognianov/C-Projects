@@ -17,10 +17,10 @@ namespace MathPower
 
         static double RaiseToPowerByLoop(double number, int power)
         {
-            double result = number;
+            double result = 1;
             for (int i = 0; i < power; i++)
             {
-                result *=result;
+                result *=number;
             }
             return result;
         }
