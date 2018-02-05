@@ -1,0 +1,4 @@
+.cs
+--F:\OneDrive\SoftUni[Projects]\C# Projects\StreamsExercises\DirectoryTraversal\Program.cs - 2041kb
+.csproj
+--F:\OneDrive\SoftUni[Projects]\C# Projects\StreamsExercises\DirectoryTraversal\07.DirectoryTraversal.csproj - 178kb

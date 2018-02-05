@@ -4,3 +4,14 @@ demo
 *.csproj
 obj
 bin
+*.suo
+*.user
+*.png
+*.lock
+*.mp4
+*.ide
+*.ide-shm
+*.ide-wal
+/ObjectsAndClassesLab/packages/Nakov.TurtleGraphics.1.0.0.2/Nakov.TurtleGraphics.1.0.0.2.nupkg
+/ObjectsAndClassesLab/packages/Nakov.TurtleGraphics.1.0.0.2/lib/net20/Nakov.TurtleGraphics.dll
+/-Copy.gitignore
