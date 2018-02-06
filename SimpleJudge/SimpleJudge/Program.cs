@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace BashSoft
+namespace SimpleJudge
 {
     class Program
     {
         static void Main(string[] args)
         {
-            InputReader.StarReadingCommands();
+            Console.WriteLine("Hello World!");
         }
     }
 }
