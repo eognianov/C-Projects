@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿using System.IO;
 
-namespace BashSoft
+namespace BashSoft.StaticData
 {
     public static class SessionData
     {

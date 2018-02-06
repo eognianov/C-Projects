@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
+﻿using System.Diagnostics;
+using BashSoft.Judge;
+using BashSoft.Repository;
+using BashSoft.StaticData;
 
-namespace BashSoft
+namespace BashSoft.IO
 {
     public static class CommandInterpreter
     {
@@ -228,7 +228,7 @@ namespace BashSoft
 
         private static void TryCompareFiles(string input, string[] data)
         {
-            if (data.Length==2)
+            if (data.Length==3)
             {
                 string firstPath = data[1];
                 string secondPath = data[2];

@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using BashSoft.IO;
+using BashSoft.StaticData;
 
-namespace BashSoft
+namespace BashSoft.Judge
 {
     public static class Tester
     {

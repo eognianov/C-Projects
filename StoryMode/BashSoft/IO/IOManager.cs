@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using BashSoft.StaticData;
 
-namespace BashSoft
+namespace BashSoft.IO
 {
     public static class IOManager
     {

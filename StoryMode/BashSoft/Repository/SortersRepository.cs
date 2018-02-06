@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
+using BashSoft.IO;
+using BashSoft.StaticData;
 
-namespace BashSoft
+namespace BashSoft.Repository
 {
     public static class SortersRepository
     {

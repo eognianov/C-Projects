@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BashSoft
+﻿namespace BashSoft.StaticData
 {
     public static class ExceptionMessages
     {
