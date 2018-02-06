@@ -30,5 +30,15 @@ namespace BashSoft
             "The given name contains symbols that are not allowed to be used in names of files and folders.";
 
         public const string UnableToGoHigherInPartitionHierarchy = "Unable To Go Higher In Partition Hierarchy";
+
+        public const string UnableToParseNumber = "The sequence you\'ve written is not a valid number.";
+
+        public const string InvalidStudentsFilter =
+            "The given filter is not one of the following: excellent/average/poor";
+
+        public const string InvalidComparisonQuery =
+            "The comparison query you want, does not exist in the context of the current program!";
+
+
     }
 }
