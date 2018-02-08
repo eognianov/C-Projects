@@ -18,7 +18,7 @@ namespace Regeh
 
             foreach (Match m in Regex.Matches(input, pattern))
             {
-               indexes.Add(int.Parse(m.Groups[2].Value));
+                indexes.Add(int.Parse(m.Groups[2].Value));
                 indexes.Add(int.Parse(m.Groups[4].Value));
             }
 

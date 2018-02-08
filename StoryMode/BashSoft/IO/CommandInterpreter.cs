@@ -1,4 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Net;
 using BashSoft.Judge;
 using BashSoft.Repository;
 using BashSoft.StaticData;
@@ -223,6 +226,7 @@ namespace BashSoft.IO
             else
             {
                 DisplaInvalidCommandMessage(input);
+
             }
         }
 
@@ -298,6 +302,54 @@ namespace BashSoft.IO
             else
             {
                 DisplaInvalidCommandMessage(input);
+            }
+        }
+
+        private static void DownloadFile(string input, string[] data)
+        {
+            try
+            {
+                if (data.Length == 2)
+                {
+                    var remoteAddress = data[1];
+                    var fileName = Path.GetFileName(remoteAddress);
+                    var myWebClient = new WebClient();
+                    myWebClient.DownloadFile(remoteAddress, fileName);
+                    var path = AppDomain.CurrentDomain.BaseDirectory;
+                    OutputWriter.WriteMessageOnNewLine($"The file was downloaded here: {path}");
+                }
+                else
+                {
+                    DisplaInvalidCommandMessage(input);
+                }
+            }
+            catch (WebException)
+            {
+                //OutputWriter.DisplayException(ExceptionMessages.ForbiddenSymbolsInUrl);
+            }
+        }
+
+        private static void DownloadFileAsynch(string input, string[] data)
+        {
+            try
+            {
+                if (data.Length == 2)
+                {
+                    var fileName = Path.GetFileName(data[1]);
+                    var uri = new Uri(data[1]);
+                    var myWebClient = new WebClient();
+                    myWebClient.DownloadFileAsync(uri, fileName);
+                    var path = AppDomain.CurrentDomain.BaseDirectory;
+                    OutputWriter.WriteMessageOnNewLine($"The file is downloading here: {path}");
+                }
+                else
+                {
+                    DisplaInvalidCommandMessage(input);
+                }
+            }
+            catch (WebException)
+            {
+                //OutputWriter.DisplayException(ExceptionMessages.ForbiddenSymbolsInUrl);
             }
         }
     }
