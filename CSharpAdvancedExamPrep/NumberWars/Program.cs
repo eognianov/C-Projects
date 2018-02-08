@@ -6,86 +6,97 @@ namespace NumberWars
 {
     class Program
     {
+        private const int maxCounter = 1000000;
         static void Main(string[] args)
         {
-            string[] input = Console.ReadLine().Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries)
-                .ToArray();
-            Queue<string> firstPlayer = new Queue<string>(input);
-            input = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .ToArray();
-            Queue<string> secondPlayer = new Queue<string>(input);
-            int turns = 0;
-            while (turns< 1000000 && firstPlayer.Count>0 && secondPlayer.Count>0)
+            var firstAllCards = new Queue<string>(Console.ReadLine().Split());
+            var secondAllCards = new Queue<string>(Console.ReadLine().Split());
+            var turnCounter = 0;
+            bool gameOver = false;
+            while (turnCounter<maxCounter && firstAllCards.Count>0 && secondAllCards.Count>0 && !gameOver)
             {
-                int firstPlayerPoints = int.Parse(firstPlayer.Peek().Substring(0, firstPlayer.Peek().Length-1));
-                int secondPlayerPoints = int.Parse(secondPlayer.Peek().Substring(0, secondPlayer.Peek().Length-1));
-                List<string> flop = new List<string>();
-                flop.Add(firstPlayer.Dequeue());
-                flop.Add(secondPlayer.Dequeue());
-
-                if (firstPlayerPoints > secondPlayerPoints)
+                turnCounter++;
+                var firstCard = firstAllCards.Dequeue();
+                var secondCard = secondAllCards.Dequeue();
+                if (GetNumber(firstCard) > GetNumber(secondCard))
                 {
-                    flop.OrderByDescending(x=>x).ToList().ForEach(x=>firstPlayer.Enqueue(x));
-                }else if (firstPlayerPoints < secondPlayerPoints)
+                    firstAllCards.Enqueue(firstCard);
+                    firstAllCards.Enqueue(secondCard);
+                }
+                else if (GetNumber(secondCard) > GetNumber(firstCard))
                 {
-                    flop.OrderByDescending(x => x).ToList().ForEach(x => secondPlayer.Enqueue(x));
+                    secondAllCards.Enqueue(secondCard);
+                    secondAllCards.Enqueue(firstCard);
                 }
                 else
                 {
-                    
-                    flop.Add(firstPlayer.Dequeue());
-                    flop.Add(secondPlayer.Dequeue());
-                    PlayDraw(firstPlayer, secondPlayer,flop);
+                    var cardsHand = new List<string>{firstCard, secondCard};
+                    while (!gameOver)
+                    {
+                        if (firstAllCards.Count >= 3 && secondAllCards.Count >= 3)
+                        {
+                            int firstSum = 0;
+                            int secondSum = 0;
+                            for (int counter = 0; counter < 3; counter++)
+                            {
+                                var fistHandCard = firstAllCards.Dequeue();
+                                var secondHandCard = secondAllCards.Dequeue();
+                                firstSum += GetChar(fistHandCard);
+                                secondSum += GetChar(secondHandCard);
+                                cardsHand.Add(fistHandCard);
+                                cardsHand.Add(secondHandCard);
+                            }
+                            if (firstSum > secondSum)
+                            {
+                                AddCardsToWinner(cardsHand, firstAllCards);
+                                break;
+                            }
+                            else if (firstSum < secondSum)
+                            {
+                                AddCardsToWinner(cardsHand,secondAllCards);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            gameOver = true;
+                        }
+                    }
                 }
 
-                turns++;
             }
-            if (firstPlayer.Count == secondPlayer.Count)
+            var result = "";
+            if (firstAllCards.Count==secondAllCards.Count)
             {
-                Console.WriteLine($"Draw after {turns} turns");
+                result = "Draw";
             }
-            else if (firstPlayer.Count > secondPlayer.Count)
+            else if (firstAllCards.Count > secondAllCards.Count)
             {
-                Console.WriteLine($"First player wins after {turns} turns");
+                result = "First player wins";
             }
             else
             {
-                Console.WriteLine($"Second player wins after {turns} turns");
+                result = "Second player wins";
             }
-            
+            Console.WriteLine($"{result} after {turnCounter} turns");
         }
 
-        private static void PlayDraw(Queue<string> firstPlayer, Queue<string> secondPlayer, List<string> flop)
+        private static void AddCardsToWinner(List<string> cardsHand, Queue<string> firstAllCards)
         {
-            
-            int firstSum = 0;
-            int secondSum = 0;
-            
-            for (int i = 0; i < Math.Min(3, Math.Min(firstPlayer.Count,secondPlayer.Count)); i++)
+            foreach (var card in cardsHand.OrderByDescending(c=>GetNumber(c)).ThenByDescending(c=>GetChar(c)))
             {
-                int letter = firstPlayer.Peek().ToUpper().ToCharArray().Last() - 64;
-                firstSum += letter;
-                flop.Add(firstPlayer.Dequeue());
-                letter = secondPlayer.Peek().ToUpper().ToCharArray().Last() - 64;
-                secondSum += letter;
-                flop.Add(secondPlayer.Dequeue());
+                firstAllCards.Enqueue(card);
             }
-            if (firstSum > secondSum)
-            {
-                
-                firstPlayer.Enqueue(flop.OrderByDescending(x => x).ToString());
-            }
-            else if (firstSum < secondSum)
-            {
-                
-                secondPlayer.Enqueue(flop.OrderByDescending(x=>x).ToString());
-                
-            }
-            else
-            {
-                if(firstPlayer.Count!=0 && secondPlayer.Count != 0)
-                    PlayDraw(firstPlayer,secondPlayer,flop);
-            }
+        }
+
+        static int GetNumber(string card)
+        {
+            return int.Parse(card.Substring(0, card.Length - 1));
+        }
+
+        static int GetChar(string card)
+        {
+            return card[card.Length - 1];
         }
     }
 }
