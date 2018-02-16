@@ -1,12 +1,15 @@
 ﻿
+using System;
+
 class StartUp
 {
     static void Main()
     {
-        StudentSystem studentSystem = new StudentSystem();
-        while (true)
+        var studentSystem = new StudentSystem();
+        string commnad;
+        while ((commnad= Console.ReadLine())!="Exit")
         {
-            studentSystem.ParseCommand();
+            studentSystem.ParseCommand(commnad);
         }
     }
 }
