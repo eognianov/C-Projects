@@ -5,55 +5,30 @@ using System.Text;
 
 public class PriceCalculator
 {
-    public decimal Price { get; set; }
-
-    public void Calculte(decimal pricePerDay, int numberOfDays, string season, string discountStr)
+    private decimal pricePerNight;
+    private int nights;
+    private Season season;
+    private Discount discount;
+    public PriceCalculator(string commnad)
     {
-        int addPerSeason = AddPerSeaon(season);
-        int discountPercentege = DiscountPersentage(discountStr);
-        decimal price = pricePerDay * numberOfDays * addPerSeason;
-        decimal discount = price * discountPercentege / 100;
-        this.Price = price - discount;
-    }
-
-    private int DiscountPersentage(string discount)
-    {
-        switch (discount)
+        var splitCommand = commnad.Split();
+        pricePerNight = decimal.Parse(splitCommand[0]);
+        nights = int.Parse(splitCommand[1]);
+        season = Enum.Parse<Season>(splitCommand[2]);
+        discount = Discount.None;
+        if (splitCommand.Length > 3)
         {
-            case "VIP":
-                return 20;
-            case "SecondVisit":
-                return 10;
-            default:
-                return 0;
+            discount = Enum.Parse<Discount>(splitCommand[3]);
         }
     }
-
-    private int AddPerSeaon(string season)
+    public string CalculatePrice()
     {
-        switch (season)
-        {
-            case "Autumn":
-                return 1;
-                break;
-            case "Sprint":
-                return 2;
-                break;
-            case "Winter":
-                return 3;
-                break;
-            case "Summer":
-                return 4;
-                break;
-            default:
-                return 0;
-                break;
-        }
-    }
+        var tempTotal = pricePerNight * nights * (int) season;
 
-    public override string ToString()
-    {
-        return $"{Price:F2}";
+        var discountPercentage = ((decimal) 100 - (int) discount) / 100;
+
+        var totalPrice = tempTotal * discountPercentage;
+        return $"{totalPrice:F2}";
     }
 }
 
