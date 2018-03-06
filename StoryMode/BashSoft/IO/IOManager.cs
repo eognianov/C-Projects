@@ -5,9 +5,9 @@ using BashSoft.StaticData;
 
 namespace BashSoft.IO
 {
-    public static class IOManager
+    public class IOManager
     {
-        public static void TraverseDirectory(int depth)
+        public void TraverseDirectory(int depth)
         {
             OutputWriter.WriteEmptyLine();
             int initialIndentation = SessionData.currentPath.Split('\\').Length;
@@ -44,7 +44,7 @@ namespace BashSoft.IO
             }
         }
 
-        public static void CreateDirectoryInCurrentFolder(string name)
+        public void CreateDirectoryInCurrentFolder(string name)
         {
             string path = Directory.GetCurrentDirectory() + "\\" + name;
             try
@@ -58,7 +58,7 @@ namespace BashSoft.IO
             
         }
 
-        public static void ChangeCurrentDirectoryRelative(string relativePath)
+        public void ChangeCurrentDirectoryRelative(string relativePath)
         {
             if (relativePath == "..")
             {
@@ -83,7 +83,7 @@ namespace BashSoft.IO
             }
         }
 
-        public static void ChangeDirectoryAbsolute(string absolutePath)
+        public void ChangeDirectoryAbsolute(string absolutePath)
         {
             if (!Directory.Exists(absolutePath))
             {

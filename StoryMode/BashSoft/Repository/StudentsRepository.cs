@@ -6,17 +6,25 @@ using BashSoft.StaticData;
 
 namespace BashSoft.Repository
 {
-    public static class StudentsRepository
+    public class StudentsRepository
     {
-        public static bool isDataInitialized = false;
-        private static Dictionary<string, Dictionary<string, List<int>>> studentsByCourse;
+        public bool isDataInitialized = false;
+        private Dictionary<string, Dictionary<string, List<int>>> studentsByCourse;
+        private RepositoryFilter filter;
+        private RepositorySorter sorter;
 
-        public static void InitializeData(string fileName)
+        public StudentsRepository(RepositorySorter sorter, RepositoryFilter filter)
+        {
+            this.filter = filter;
+            this.sorter = sorter;
+            this.studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
+        }
+
+        public void LoadData(string fileName)
         {
             if (!isDataInitialized)
             {
                 OutputWriter.WriteMessageOnNewLine("Reading data...");
-                studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
                 ReadData(fileName);
             }
             else
@@ -25,7 +33,17 @@ namespace BashSoft.Repository
             }
         }
 
-        private static void ReadData(string fileName)
+        public void UnloadDate()
+        {
+            if (!this.isDataInitialized)
+            {
+                OutputWriter.DisplayException(ExceptionMessages.DataNotInitializedExceptionMessage);
+            }
+            this.studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
+            this.isDataInitialized = false;
+        }
+
+        private void ReadData(string fileName)
         {
             string path = SessionData.currentPath + '\\' + fileName;
             if (File.Exists(path))
@@ -75,7 +93,7 @@ namespace BashSoft.Repository
             
         }
 
-        private static bool IsQueryForCoursePossible(string courseName)
+        private bool IsQueryForCoursePossible(string courseName)
         {
             if (isDataInitialized)
             {
@@ -97,7 +115,7 @@ namespace BashSoft.Repository
             return false;
         }
 
-        private static bool IsQueryForStudentPossible(string courseName, string studentUserName)
+        private bool IsQueryForStudentPossible(string courseName, string studentUserName)
         {
             if (IsQueryForCoursePossible(courseName) && studentsByCourse[courseName].ContainsKey(studentUserName))
             {
@@ -110,7 +128,7 @@ namespace BashSoft.Repository
             return false;
         }
 
-        public static void GetStudentScoresFromCourse(string courseName, string username)
+        public void GetStudentScoresFromCourse(string courseName, string username)
         {
             if (IsQueryForStudentPossible(courseName, username))
             {
@@ -118,7 +136,7 @@ namespace BashSoft.Repository
             }
         }
 
-        public static void GetAllStudentsFromCourse(string courseName)
+        public void GetAllStudentsFromCourse(string courseName)
         {
             if (IsQueryForCoursePossible(courseName))
             {
@@ -130,7 +148,7 @@ namespace BashSoft.Repository
             }
         }
 
-        public static void FilterAndTake(string courseName, string givenFilter, int? studentsToTake = null)
+        public void FilterAndTake(string courseName, string givenFilter, int? studentsToTake = null)
         {
             if (IsQueryForCoursePossible(courseName))
             {
@@ -139,11 +157,11 @@ namespace BashSoft.Repository
                     studentsToTake = studentsByCourse[courseName].Count;
                 }
 
-                FiltersRepository.FilterAndTake(studentsByCourse[courseName],givenFilter,studentsToTake.Value);
+                this.filter.FilterAndTake(studentsByCourse[courseName],givenFilter,studentsToTake.Value);
             }
         }
 
-        public static void OrderAndTake(string courseName, string comparison, int? studentsToTake = null)
+        public void OrderAndTake(string courseName, string comparison, int? studentsToTake = null)
         {
             if (IsQueryForCoursePossible(courseName))
             {
@@ -152,7 +170,7 @@ namespace BashSoft.Repository
                     studentsToTake = studentsByCourse[courseName].Count;
                 }
 
-                SortersRepository.OrderAndTake(studentsByCourse[courseName],comparison,studentsToTake.Value);
+                this.sorter.OrderAndTake(studentsByCourse[courseName],comparison,studentsToTake.Value);
             }
         }
     }

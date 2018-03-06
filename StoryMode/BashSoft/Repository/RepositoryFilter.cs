@@ -6,9 +6,9 @@ using BashSoft.StaticData;
 
 namespace BashSoft.Repository
 {
-    public static class FiltersRepository
+    public class RepositoryFilter
     {
-        public static void FilterAndTake(Dictionary<string, List<int>> wantedData, string wantedFilter,
+        public void FilterAndTake(Dictionary<string, List<int>> wantedData, string wantedFilter,
             int studentsToTake)
         {
             if (wantedFilter =="excellent")
@@ -29,7 +29,7 @@ namespace BashSoft.Repository
             }
         }
 
-        private static void FilterAndTake(Dictionary<string, List<int>> wantedData, Predicate<double> givenFilter,
+        private void FilterAndTake(Dictionary<string, List<int>> wantedData, Predicate<double> givenFilter,
             int studentsToTake)
         {
             int counterForPrinted = 0;
@@ -51,9 +51,7 @@ namespace BashSoft.Repository
             }
         }
 
-        
-
-        private static double Average(List<int> scoresOnTasks)
+        private double Average(List<int> scoresOnTasks)
         {
             int totalScore = 0;
             foreach (var scoresOnTask in scoresOnTasks)

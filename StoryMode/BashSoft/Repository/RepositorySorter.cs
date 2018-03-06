@@ -5,9 +5,9 @@ using BashSoft.StaticData;
 
 namespace BashSoft.Repository
 {
-    public static class SortersRepository
+    public class RepositorySorter
     {
-        public static void OrderAndTake(Dictionary<string, List<int>> wantedData, string comparison, int studentsToTake)
+        public void OrderAndTake(Dictionary<string, List<int>> wantedData, string comparison, int studentsToTake)
         {
             
             comparison = comparison.ToLower();
@@ -25,7 +25,7 @@ namespace BashSoft.Repository
             }
         }
 
-        private static void PrintStudents(Dictionary<string, List<int>> studentSorted)
+        private void PrintStudents(Dictionary<string, List<int>> studentSorted)
         {
             foreach (var student in studentSorted)
             {

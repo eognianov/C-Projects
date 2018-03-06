@@ -1,5 +1,7 @@
 ﻿using System;
 using BashSoft.IO;
+using BashSoft.Judge;
+using BashSoft.Repository;
 
 namespace BashSoft
 {
@@ -7,7 +9,12 @@ namespace BashSoft
     {
         static void Main(string[] args)
         {
-            InputReader.StarReadingCommands();
+            Tester tester = new Tester();
+            IOManager ioManager = new IOManager();
+            StudentsRepository repo = new StudentsRepository(new RepositorySorter(), new RepositoryFilter());
+            CommandInterpreter currentInterpreter = new CommandInterpreter(tester, repo, ioManager);
+            InputReader reader = new InputReader(currentInterpreter);
+            reader.StarReadingCommands();
         }
     }
 }
