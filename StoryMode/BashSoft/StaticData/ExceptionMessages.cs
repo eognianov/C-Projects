@@ -3,6 +3,7 @@
     public static class ExceptionMessages
     {
         public const string ExampleExceptionMessage = "Example message!";
+
         public const string DataAlreadyInitializedException = "Data is already initialized!";
 
         public const string DataNotInitializedExceptionMessage =
@@ -14,8 +15,8 @@
         public const string InexistingStudentInDataBase =
             "The user name for the student you are trying to get does not exist!";
 
-        public const string InvalidPath =
-            "The folder/file you are trying to access at the current address, does not exist.";
+        //public const string InvalidPath =
+        //    "The folder/file you are trying to access at the current address, does not exist.";
 
         public const string UnauthorizedAccessException =
             "The folder/file you are trying to get access needs a higher level of rights than you currently have.";
@@ -37,5 +38,16 @@
 
         public const string InvalidTakeQuantityParameter =
             "The take command expected does not match the format wanted!";
+
+        //public const string StudentAlreadyEnrolledInGivenCourse = "The {0} already exists in {1}.";
+
+        //public const string NotEnrolledInCourse = "Student must be enrolled in a course before you set his mark.";
+
+        public const string InvalidNumberOfScores =
+            "The number of scores for the given course is greater than the possible.";
+
+        public const string InvalidScore = "The number for the score you've entered is not in the range of 0 - 100";
+
+        //public const string NullOrEmptyValue = "The value of the variable CANNOT be null or empty!";
     }
 }

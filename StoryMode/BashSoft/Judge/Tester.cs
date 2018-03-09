@@ -9,9 +9,9 @@ namespace BashSoft.Judge
     {
         public void CompareContent(string userOutputPath, string expectedOutputPath)
         {
-            OutputWriter.WriteMessageOnNewLine("Reading files...");
             try
             {
+                OutputWriter.WriteMessageOnNewLine("Reading files...");
                 string mismatchPath = GetMismatchPath(expectedOutputPath);
 
                 string[] actualOutputLines = File.ReadAllLines(userOutputPath);
@@ -24,11 +24,12 @@ namespace BashSoft.Judge
                 PrintOutput(mismatches, hasMismatch, mismatchPath);
                 OutputWriter.WriteMessageOnNewLine("Files read!");
             }
-            catch (FileNotFoundException)
+            catch (IOException exception)
             {
-                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
+                throw new IOException(exception.Message);
+                //OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
             }
-            
+
         }
 
         private void PrintOutput(string[] mismatches, bool hasMismatch, string mismatchPath)
@@ -37,18 +38,13 @@ namespace BashSoft.Judge
             {
                 foreach (var line in mismatches)
                 {
-                    OutputWriter.WriteMessageOnNewLine(line);   
+                    OutputWriter.WriteMessageOnNewLine(line);
                 }
 
-                try
-                {
-                    File.WriteAllLines(mismatchPath, mismatches);
-                }
-                catch (DirectoryNotFoundException)
-                {
-                    OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
-                }
-                
+
+                File.WriteAllLines(mismatchPath, mismatches);
+
+
                 return;
             }
             OutputWriter.WriteMessageOnNewLine("Files are identical. There are no mismatches.");
@@ -61,7 +57,7 @@ namespace BashSoft.Judge
             string[] mismatches = new string[actualOutputLines.Length];
             OutputWriter.WriteMessageOnNewLine("Comparing files...");
             int minOutputLines = actualOutputLines.Length;
-            if (actualOutputLines.Length!=expectedOutputLines.Length)
+            if (actualOutputLines.Length != expectedOutputLines.Length)
             {
                 hasMismatch = true;
                 minOutputLines = Math.Min(actualOutputLines.Length, expectedOutputLines.Length);
