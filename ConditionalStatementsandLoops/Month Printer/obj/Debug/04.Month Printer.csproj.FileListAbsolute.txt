@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\Month Printer\bin\Debug\Month Printer.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\Month Printer\bin\Debug\Month Printer.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\Month Printer\bin\Debug\Month Printer.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\Month Printer\obj\Debug\04.Month Printer.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\Month Printer\obj\Debug\04.Month Printer.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\Month Printer\obj\Debug\Month Printer.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\Month Printer\obj\Debug\Month Printer.pdb

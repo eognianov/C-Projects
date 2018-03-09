@@ -1,6 +1,0 @@
-F:\OneDrive\C# Projects\MethodsAndDebuging\SignOfInteger\bin\Debug\SignOfInteger.exe.config
-F:\OneDrive\C# Projects\MethodsAndDebuging\SignOfInteger\bin\Debug\SignOfInteger.exe
-F:\OneDrive\C# Projects\MethodsAndDebuging\SignOfInteger\bin\Debug\SignOfInteger.pdb
-F:\OneDrive\C# Projects\MethodsAndDebuging\SignOfInteger\obj\Debug\02.SignOfInteger.csproj.CoreCompileInputs.cache
-F:\OneDrive\C# Projects\MethodsAndDebuging\SignOfInteger\obj\Debug\SignOfInteger.exe
-F:\OneDrive\C# Projects\MethodsAndDebuging\SignOfInteger\obj\Debug\SignOfInteger.pdb

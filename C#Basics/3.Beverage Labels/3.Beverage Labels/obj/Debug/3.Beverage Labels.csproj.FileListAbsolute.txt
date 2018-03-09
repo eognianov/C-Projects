@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\3.Beverage Labels\3.Beverage Labels\bin\Debug\3.Beverage Labels.exe.config
-C:\Users\Emilian Ognianov\source\repos\3.Beverage Labels\3.Beverage Labels\bin\Debug\3.Beverage Labels.exe
-C:\Users\Emilian Ognianov\source\repos\3.Beverage Labels\3.Beverage Labels\bin\Debug\3.Beverage Labels.pdb
-C:\Users\Emilian Ognianov\source\repos\3.Beverage Labels\3.Beverage Labels\obj\Debug\3.Beverage Labels.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\3.Beverage Labels\3.Beverage Labels\obj\Debug\3.Beverage Labels.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\3.Beverage Labels\3.Beverage Labels\obj\Debug\3.Beverage Labels.exe
-C:\Users\Emilian Ognianov\source\repos\3.Beverage Labels\3.Beverage Labels\obj\Debug\3.Beverage Labels.pdb

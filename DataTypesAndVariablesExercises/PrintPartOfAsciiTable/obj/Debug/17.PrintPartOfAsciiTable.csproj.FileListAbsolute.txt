@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PrintPartOfAsciiTable\bin\Debug\PrintPartOfAsciiTable.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PrintPartOfAsciiTable\bin\Debug\PrintPartOfAsciiTable.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PrintPartOfAsciiTable\bin\Debug\PrintPartOfAsciiTable.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PrintPartOfAsciiTable\obj\Debug\17.PrintPartOfAsciiTable.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PrintPartOfAsciiTable\obj\Debug\PrintPartOfAsciiTable.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\PrintPartOfAsciiTable\obj\Debug\PrintPartOfAsciiTable.pdb

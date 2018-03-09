@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\Hotel\bin\Debug\Hotel.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\Hotel\bin\Debug\Hotel.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\Hotel\bin\Debug\Hotel.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\Hotel\obj\Debug\04.Hotel.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\Hotel\obj\Debug\04.Hotel.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\Hotel\obj\Debug\Hotel.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\Hotel\obj\Debug\Hotel.pdb

@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\3.Employee Data\3.Employee Data\bin\Debug\3.Employee Data.exe.config
-C:\Users\Emilian Ognianov\source\repos\3.Employee Data\3.Employee Data\bin\Debug\3.Employee Data.exe
-C:\Users\Emilian Ognianov\source\repos\3.Employee Data\3.Employee Data\bin\Debug\3.Employee Data.pdb
-C:\Users\Emilian Ognianov\source\repos\3.Employee Data\3.Employee Data\obj\Debug\3.Employee Data.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\3.Employee Data\3.Employee Data\obj\Debug\3.Employee Data.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\3.Employee Data\3.Employee Data\obj\Debug\3.Employee Data.exe
-C:\Users\Emilian Ognianov\source\repos\3.Employee Data\3.Employee Data\obj\Debug\3.Employee Data.pdb

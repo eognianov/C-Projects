@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VovelOrOther\bin\Debug\VovelOrOther.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VovelOrOther\bin\Debug\VovelOrOther.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VovelOrOther\bin\Debug\VovelOrOther.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VovelOrOther\obj\Debug\13.VovelOrOther.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VovelOrOther\obj\Debug\VovelOrOther.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\VovelOrOther\obj\Debug\VovelOrOther.pdb

@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\ExactSumOfRealNumbers\bin\Debug\ExactSumOfRealNumbers.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\ExactSumOfRealNumbers\bin\Debug\ExactSumOfRealNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\ExactSumOfRealNumbers\bin\Debug\ExactSumOfRealNumbers.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\ExactSumOfRealNumbers\obj\Debug\03.ExactSumOfRealNumbers.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\ExactSumOfRealNumbers\obj\Debug\ExactSumOfRealNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\ExactSumOfRealNumbers\obj\Debug\ExactSumOfRealNumbers.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\ExactSumOfRealNumbers\obj\Debug\03.ExactSumOfRealNumbers.csprojResolveAssemblyReference.cache

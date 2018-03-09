@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\FastPrimeCheckerRefactor\bin\Debug\FastPrimeCheckerRefactor.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\FastPrimeCheckerRefactor\bin\Debug\FastPrimeCheckerRefactor.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\FastPrimeCheckerRefactor\bin\Debug\FastPrimeCheckerRefactor.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\FastPrimeCheckerRefactor\obj\Debug\15.FastPrimeCheckerRefactor.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\FastPrimeCheckerRefactor\obj\Debug\FastPrimeCheckerRefactor.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\FastPrimeCheckerRefactor\obj\Debug\FastPrimeCheckerRefactor.pdb

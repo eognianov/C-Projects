@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\MultiplicationTable\bin\Debug\MultiplicationTable.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\MultiplicationTable\bin\Debug\MultiplicationTable.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\MultiplicationTable\bin\Debug\MultiplicationTable.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\MultiplicationTable\obj\Debug\09.MultiplicationTable.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\MultiplicationTable\obj\Debug\MultiplicationTable.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\MultiplicationTable\obj\Debug\MultiplicationTable.pdb

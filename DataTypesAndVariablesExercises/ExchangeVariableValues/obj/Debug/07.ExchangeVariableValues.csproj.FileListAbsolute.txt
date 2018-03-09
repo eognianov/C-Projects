@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ExchangeVariableValues\bin\Debug\ExchangeVariableValues.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ExchangeVariableValues\bin\Debug\ExchangeVariableValues.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ExchangeVariableValues\bin\Debug\ExchangeVariableValues.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ExchangeVariableValues\obj\Debug\07.ExchangeVariableValues.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ExchangeVariableValues\obj\Debug\ExchangeVariableValues.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ExchangeVariableValues\obj\Debug\ExchangeVariableValues.pdb

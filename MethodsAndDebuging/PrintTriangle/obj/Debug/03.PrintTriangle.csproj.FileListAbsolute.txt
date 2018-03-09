@@ -1,7 +1,0 @@
-F:\OneDrive\C# Projects\MethodsAndDebuging\PrintTriangle\bin\Debug\PrintTriangle.exe.config
-F:\OneDrive\C# Projects\MethodsAndDebuging\PrintTriangle\bin\Debug\PrintTriangle.exe
-F:\OneDrive\C# Projects\MethodsAndDebuging\PrintTriangle\bin\Debug\PrintTriangle.pdb
-F:\OneDrive\C# Projects\MethodsAndDebuging\PrintTriangle\obj\Debug\03.PrintTriangle.csprojResolveAssemblyReference.cache
-F:\OneDrive\C# Projects\MethodsAndDebuging\PrintTriangle\obj\Debug\03.PrintTriangle.csproj.CoreCompileInputs.cache
-F:\OneDrive\C# Projects\MethodsAndDebuging\PrintTriangle\obj\Debug\PrintTriangle.exe
-F:\OneDrive\C# Projects\MethodsAndDebuging\PrintTriangle\obj\Debug\PrintTriangle.pdb

@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CaloriesCounter\bin\Debug\CaloriesCounter.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CaloriesCounter\bin\Debug\CaloriesCounter.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CaloriesCounter\bin\Debug\CaloriesCounter.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CaloriesCounter\obj\Debug\08.CaloriesCounter.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CaloriesCounter\obj\Debug\CaloriesCounter.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\CaloriesCounter\obj\Debug\CaloriesCounter.pdb

@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\2.Rectangle Area\2.Rectangle Area\bin\Debug\2.Rectangle Area.exe.config
-C:\Users\Emilian Ognianov\source\repos\2.Rectangle Area\2.Rectangle Area\bin\Debug\2.Rectangle Area.exe
-C:\Users\Emilian Ognianov\source\repos\2.Rectangle Area\2.Rectangle Area\bin\Debug\2.Rectangle Area.pdb
-C:\Users\Emilian Ognianov\source\repos\2.Rectangle Area\2.Rectangle Area\obj\Debug\2.Rectangle Area.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\2.Rectangle Area\2.Rectangle Area\obj\Debug\2.Rectangle Area.exe
-C:\Users\Emilian Ognianov\source\repos\2.Rectangle Area\2.Rectangle Area\obj\Debug\2.Rectangle Area.pdb

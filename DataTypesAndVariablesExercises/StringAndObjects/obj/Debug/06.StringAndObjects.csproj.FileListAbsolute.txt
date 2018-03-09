@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\StringAndObjects\bin\Debug\StringAndObjects.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\StringAndObjects\bin\Debug\StringAndObjects.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\StringAndObjects\bin\Debug\StringAndObjects.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\StringAndObjects\obj\Debug\06.StringAndObjects.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\StringAndObjects\obj\Debug\StringAndObjects.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\StringAndObjects\obj\Debug\StringAndObjects.pdb

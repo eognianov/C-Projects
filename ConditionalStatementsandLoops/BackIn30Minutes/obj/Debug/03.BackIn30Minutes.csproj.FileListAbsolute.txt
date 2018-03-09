@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\BackIn30Minutes\bin\Debug\BackIn30Minutes.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\BackIn30Minutes\bin\Debug\BackIn30Minutes.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\BackIn30Minutes\bin\Debug\BackIn30Minutes.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\BackIn30Minutes\obj\Debug\03.BackIn30Minutes.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\BackIn30Minutes\obj\Debug\03.BackIn30Minutes.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\BackIn30Minutes\obj\Debug\BackIn30Minutes.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\BackIn30Minutes\obj\Debug\BackIn30Minutes.pdb

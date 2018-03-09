@@ -1,7 +1,0 @@
-F:\OneDrive\C# Projects\MethodsAndDebuging\DrawFilledSquare\bin\Debug\DrawFilledSquare.exe.config
-F:\OneDrive\C# Projects\MethodsAndDebuging\DrawFilledSquare\bin\Debug\DrawFilledSquare.exe
-F:\OneDrive\C# Projects\MethodsAndDebuging\DrawFilledSquare\bin\Debug\DrawFilledSquare.pdb
-F:\OneDrive\C# Projects\MethodsAndDebuging\DrawFilledSquare\obj\Debug\04.DrawFilledSquare.csprojResolveAssemblyReference.cache
-F:\OneDrive\C# Projects\MethodsAndDebuging\DrawFilledSquare\obj\Debug\04.DrawFilledSquare.csproj.CoreCompileInputs.cache
-F:\OneDrive\C# Projects\MethodsAndDebuging\DrawFilledSquare\obj\Debug\DrawFilledSquare.exe
-F:\OneDrive\C# Projects\MethodsAndDebuging\DrawFilledSquare\obj\Debug\DrawFilledSquare.pdb

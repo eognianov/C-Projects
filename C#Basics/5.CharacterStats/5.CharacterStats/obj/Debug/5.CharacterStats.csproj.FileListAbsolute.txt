@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\5.CharacterStats\5.CharacterStats\obj\Debug\5.CharacterStats.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\5.CharacterStats\5.CharacterStats\obj\Debug\5.CharacterStats.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\5.CharacterStats\5.CharacterStats\bin\Debug\5.CharacterStats.exe.config
-C:\Users\Emilian Ognianov\source\repos\5.CharacterStats\5.CharacterStats\bin\Debug\5.CharacterStats.exe
-C:\Users\Emilian Ognianov\source\repos\5.CharacterStats\5.CharacterStats\bin\Debug\5.CharacterStats.pdb
-C:\Users\Emilian Ognianov\source\repos\5.CharacterStats\5.CharacterStats\obj\Debug\5.CharacterStats.exe
-C:\Users\Emilian Ognianov\source\repos\5.CharacterStats\5.CharacterStats\obj\Debug\5.CharacterStats.pdb

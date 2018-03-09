@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\DevisableBy3\bin\Debug\DevisableBy3.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\DevisableBy3\bin\Debug\DevisableBy3.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\DevisableBy3\bin\Debug\DevisableBy3.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\DevisableBy3\obj\Debug\07.DevisableBy3.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\DevisableBy3\obj\Debug\DevisableBy3.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatementsandLoops\DevisableBy3\obj\Debug\DevisableBy3.pdb

@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\ChooseADrink\bin\Debug\ChooseADrink.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\ChooseADrink\bin\Debug\ChooseADrink.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\ChooseADrink\bin\Debug\ChooseADrink.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\ChooseADrink\obj\Debug\1.ChooseADrink.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\ChooseADrink\obj\Debug\1.ChooseADrink.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\ChooseADrink\obj\Debug\ChooseADrink.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\ChooseADrink\obj\Debug\ChooseADrink.pdb

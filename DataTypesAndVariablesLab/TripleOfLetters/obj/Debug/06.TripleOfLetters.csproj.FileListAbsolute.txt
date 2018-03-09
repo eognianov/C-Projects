@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\TripleOfLetters\bin\Debug\TripleOfLetters.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\TripleOfLetters\bin\Debug\TripleOfLetters.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\TripleOfLetters\bin\Debug\TripleOfLetters.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\TripleOfLetters\obj\Debug\06.TripleOfLetters.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\TripleOfLetters\obj\Debug\TripleOfLetters.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\TripleOfLetters\obj\Debug\TripleOfLetters.pdb

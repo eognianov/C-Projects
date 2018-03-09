@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\GameOfNumbers\bin\Debug\GameOfNumbers.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\GameOfNumbers\bin\Debug\GameOfNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\GameOfNumbers\bin\Debug\GameOfNumbers.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\GameOfNumbers\obj\Debug\13.GameOfNumbers.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\GameOfNumbers\obj\Debug\GameOfNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\GameOfNumbers\obj\Debug\GameOfNumbers.pdb

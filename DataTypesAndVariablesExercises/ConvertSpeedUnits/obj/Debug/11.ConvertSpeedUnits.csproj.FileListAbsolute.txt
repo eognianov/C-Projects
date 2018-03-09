@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConvertSpeedUnits\bin\Debug\ConvertSpeedUnits.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConvertSpeedUnits\bin\Debug\ConvertSpeedUnits.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConvertSpeedUnits\bin\Debug\ConvertSpeedUnits.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConvertSpeedUnits\obj\Debug\11.ConvertSpeedUnits.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConvertSpeedUnits\obj\Debug\ConvertSpeedUnits.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesExercises\ConvertSpeedUnits\obj\Debug\ConvertSpeedUnits.pdb

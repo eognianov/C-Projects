@@ -1,7 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\SpecialNumbers\bin\Debug\SpecialNumbers.exe.config
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\SpecialNumbers\bin\Debug\SpecialNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\SpecialNumbers\bin\Debug\SpecialNumbers.pdb
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\SpecialNumbers\obj\Debug\05.SpecialNumbers.csprojResolveAssemblyReference.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\SpecialNumbers\obj\Debug\05.SpecialNumbers.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\SpecialNumbers\obj\Debug\SpecialNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\DataTypesAndVariablesLab\SpecialNumbers\obj\Debug\SpecialNumbers.pdb

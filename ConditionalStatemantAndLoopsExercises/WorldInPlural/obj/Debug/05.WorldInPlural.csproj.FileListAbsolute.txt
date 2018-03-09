@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\WorldInPlural\bin\Debug\WorldInPlural.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\WorldInPlural\bin\Debug\WorldInPlural.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\WorldInPlural\bin\Debug\WorldInPlural.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\WorldInPlural\obj\Debug\05.WorldInPlural.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\WorldInPlural\obj\Debug\WorldInPlural.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\WorldInPlural\obj\Debug\WorldInPlural.pdb

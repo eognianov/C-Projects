@@ -1,6 +1,0 @@
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\5DifferentNumbers\bin\Debug\5DifferentNumbers.exe.config
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\5DifferentNumbers\bin\Debug\5DifferentNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\5DifferentNumbers\bin\Debug\5DifferentNumbers.pdb
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\5DifferentNumbers\obj\Debug\11.5DifferentNumbers.csproj.CoreCompileInputs.cache
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\5DifferentNumbers\obj\Debug\5DifferentNumbers.exe
-C:\Users\Emilian Ognianov\source\repos\ConditionalStatemantAndLoopsExercises\5DifferentNumbers\obj\Debug\5DifferentNumbers.pdb
