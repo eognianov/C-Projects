@@ -133,7 +133,7 @@ namespace Forum.Data
 
         public static void SafePosts(List<Post> posts)
         {
-            const string POST_FORMAT = "{0};{1};{2};{4};{5};{5}";
+            const string POST_FORMAT = "{0};{1};{2};{3};{4};{5}";
             List<string> lines = new List<string>();
             foreach (var post in posts)
             {

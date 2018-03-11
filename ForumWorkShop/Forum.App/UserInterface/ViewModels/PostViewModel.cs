@@ -1,4 +1,8 @@
-﻿namespace Forum.App.UserInterface.ViewModels
+﻿using System.Linq;
+using Forum.App.Services;
+using Forum.Models;
+
+namespace Forum.App.UserInterface.ViewModels
 {
     using System;
     using System.Collections.Generic;
@@ -9,12 +13,32 @@
 
         public PostViewModel()
         {
-            throw new NotImplementedException();
+            this.Content = new List<string>();
+        }
+
+        public PostViewModel(Post post)
+        {
+            this.PostId = post.Id;
+            this.Title = post.Title;
+            this.Content = this.GetLines(post.Content);
+            this.Author = UserService.GetUser(post.AuthorId).UserName;
+            this.Category = PostService.GetCategory(post.CategoryId).Name;
+            this.Replies = PostService.GetPostReplies(post.Id);
+
         }
 
         private IList<string> GetLines(string content)
         {
-            throw new NotImplementedException();
+            char[] contentChars = content.ToCharArray();
+            IList<string> lines = new List<string>();
+            for (int i = 0; i < content.Length; i+=LINE_LENGHT)
+            {
+                char[] row = contentChars.Skip(i).Take(LINE_LENGHT).ToArray();
+                string rowString = string.Join("", row);
+                lines.Add(rowString);
+            }
+
+            return lines;
         }
 
         public int PostId { get; set; }

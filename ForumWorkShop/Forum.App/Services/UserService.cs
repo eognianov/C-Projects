@@ -46,5 +46,22 @@ namespace Forum.App.Services
             bool userExists = forumData.Users.Any(u => u.UserName == username && u.Password == password);
             return userExists;
         }
+
+        internal static User GetUser(int userId)
+        {
+            ForumData forumData = new ForumData();
+
+            User user = forumData.Users.Find(u => u.Id == userId);
+
+            return user;
+        }
+
+        internal static User GetUser(string userName, ForumData forumData)
+        {
+            
+
+            User user = forumData.Users.Find(u => u.UserName == userName);
+            return user;
+        }
     }
 }
