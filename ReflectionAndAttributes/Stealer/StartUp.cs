@@ -5,9 +5,13 @@ using System.Text;
 
 namespace Stealer
 {
-    class Program
+    [SoftUniAttribute("Ventsi")]
+    public class StartUp
     {
-        static void Main(string[] args)
+        
+        
+        [SoftUniAttribute("Gosho")]
+        public static void Main(string[] args)
         {
             Spy spy = new Spy();
             //Task1(spy);
@@ -18,8 +22,13 @@ namespace Stealer
             //Task3(spy);
 
 
-            Task4(spy);
+            //Task4(spy);
+
+            
+            Tracker.PrintMethodsByAuthor();
         }
+
+        
 
         private static void Task4(Spy spy)
         {
