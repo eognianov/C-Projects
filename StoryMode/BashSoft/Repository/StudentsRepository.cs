@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using BashSoft.Contracts;
+using BashSoft.DataStructures;
 using BashSoft.Exceptions;
 using BashSoft.IO;
 using BashSoft.Models;
@@ -10,18 +12,18 @@ using BashSoft.StaticData;
 
 namespace BashSoft.Repository
 {
-    public class StudentsRepository
+    public class StudentsRepository:IDatabase
     {
         public bool isDataInitialized = false;
 
 
-        private Dictionary<string, Course> courses;
-        private Dictionary<string, Student> students;
+        private Dictionary<string, ICourse> courses;
+        private Dictionary<string, IStudent> students;
 
-        private RepositoryFilter filter;
-        private RepositorySorter sorter;
+        private IDataFilter filter;
+        private IDataSorter sorter;
 
-        public StudentsRepository(RepositorySorter sorter, RepositoryFilter filter)
+        public StudentsRepository(IDataSorter sorter, IDataFilter filter)
         {
             this.filter = filter;
             this.sorter = sorter;
@@ -31,8 +33,8 @@ namespace BashSoft.Repository
         {
             if (!isDataInitialized)
             {
-                this.students = new Dictionary<string, Student>();
-                this.courses = new Dictionary<string, Course>();
+                this.students = new Dictionary<string, IStudent>();
+                this.courses = new Dictionary<string, ICourse>();
                 OutputWriter.WriteMessageOnNewLine("Reading data...");
                 ReadData(fileName);
             }
@@ -47,8 +49,6 @@ namespace BashSoft.Repository
             if (!this.isDataInitialized)
             {
                 throw new InvalidFileNameException(ExceptionMessages.DataNotInitializedExceptionMessage);
-                //throw new ArgumentException(ExceptionMessages.DataNotInitializedExceptionMessage);
-                //OutputWriter.DisplayException(ExceptionMessages.DataNotInitializedExceptionMessage);
             }
 
             this.students = null;
@@ -81,7 +81,6 @@ namespace BashSoft.Repository
 
                             if (scores.Any(x=>x>100 || x < 0))
                             {
-                                //throw new ArgumentException(ExceptionMessages.InvalidScore);
                                 OutputWriter.DisplayException(ExceptionMessages.InvalidScore);
                                 continue;
                             }
@@ -103,8 +102,8 @@ namespace BashSoft.Repository
                             }
 
 
-                            Course course = this.courses[courseName];
-                            Student student = this.students[userName];
+                            ICourse course = this.courses[courseName];
+                            IStudent student = this.students[userName];
 
                             student.EnrollInCourse(course);
                             student.SetMarkOnCourse(courseName, scores);
@@ -115,13 +114,7 @@ namespace BashSoft.Repository
                         catch (FormatException fex)
                         {
                             throw new FormatException(fex.Message + $"at line: {line}");
-                            //OutputWriter.DisplayException(fex.Message + $"at line: {line}");
                         }
-                        //string[] tokens = allInputLines[line].Split(' ');
-                        //string course = tokens[0];
-                        //string student = tokens[1];
-                        //int mark = int.Parse(tokens[2]);
-
 
                     }
                 }
@@ -131,7 +124,6 @@ namespace BashSoft.Repository
             else
             {
                 throw new InvalidPathException();
-                //OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
             }
 
             
@@ -190,6 +182,22 @@ namespace BashSoft.Repository
                     this.GetStudentScoresFromCourse(courseName, studentMarksEntry.Key);
                 }
             }
+        }
+
+        public ISimpleOrderedBag<ICourse> GetAllCoursesSorted(IComparer<ICourse> cmp)
+        {
+            SimpleSortedList<ICourse> sortedCourses = new SimpleSortedList<ICourse>(cmp);
+            sortedCourses.AddAll(this.courses.Values);
+
+            return sortedCourses;
+        }
+
+        public ISimpleOrderedBag<IStudent> GetAllStudentsSorted(IComparer<IStudent> cmp)
+        {
+            SimpleSortedList<IStudent> sortedStudents = new SimpleSortedList<IStudent>(cmp);
+            sortedStudents.AddAll(this.students.Values);
+
+            return sortedStudents;
         }
 
         public void FilterAndTake(string courseName, string givenFilter, int? studentsToTake = null)

@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.IO;
 using BashSoft.StaticData;
 
 namespace BashSoft.Models
 {
-    class Student
+    class Student:IStudent
     {
         private string userName;
-        private Dictionary<string, Course> enrolledCourses;
+        private Dictionary<string, ICourse> enrolledCourses;
         private Dictionary<string, double> marksByCourseName;
 
         public string UserName
@@ -34,7 +35,7 @@ namespace BashSoft.Models
             }
         }
 
-        public IReadOnlyDictionary<string, Course> EnrolledCourses
+        public IReadOnlyDictionary<string, ICourse> EnrolledCourses
         {
             get
             {
@@ -55,11 +56,11 @@ namespace BashSoft.Models
         public Student(string userName)
         {
             this.UserName = userName;
-            this.enrolledCourses = new Dictionary<string, Course>();
+            this.enrolledCourses = new Dictionary<string, ICourse>();
             this.marksByCourseName = new Dictionary<string, double>();
         }
 
-        public void EnrollInCourse(Course course)
+        public void EnrollInCourse(ICourse course)
         {
             if (this.enrolledCourses.ContainsKey(course.Name))
             {
@@ -96,6 +97,16 @@ namespace BashSoft.Models
                 scores.Sum() / (double)(Course.NumberOfTaskOnExam * Course.MaxScoreOnExamTask);
             double mark = percentageOfSolvedExam * 4 + 2;
             return mark;
+        }
+
+        public int CompareTo(IStudent other)
+        {
+            return this.UserName.CompareTo(other.UserName);
+        }
+
+        public override string ToString()
+        {
+            return this.UserName;
         }
     }
 }

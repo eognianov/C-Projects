@@ -3,6 +3,7 @@ using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.IO.Commands;
 using BashSoft.Judge;
@@ -12,13 +13,13 @@ using BashSoft.StaticData;
 
 namespace BashSoft.IO
 {
-    public class CommandInterpreter
+    public class CommandInterpreter:IIntrerpreter
     {
-        private Tester judge;
-        private StudentsRepository repository;
-        private IOManager inputOutputManager;
+        private IConterComparer judge;
+        private IDatabase repository;
+        private IDirectoryManager inputOutputManager;
 
-        public CommandInterpreter(Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        public CommandInterpreter(IConterComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
         {
             this.judge = judge;
             this.repository = repository;
@@ -31,7 +32,7 @@ namespace BashSoft.IO
 
             try
             {
-                Command command = this.ParseCommand(input, commandName, data);
+                IExecutable command = this.ParseCommand(input, commandName, data);
                 command.Execute();
             }
             
@@ -43,7 +44,7 @@ namespace BashSoft.IO
 
         }
 
-        private Command ParseCommand(string input, string command, string[] data)
+        private IExecutable ParseCommand(string input, string command, string[] data)
         {
             switch (command)
             {
@@ -69,6 +70,8 @@ namespace BashSoft.IO
                     return new PrintFilteredStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "order":
                     return new PrintOrderedStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                case "display":
+                    return new DisplayCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 //case "decOrder":
                 //    break;
                 //case "download":
@@ -133,6 +136,5 @@ namespace BashSoft.IO
             }
         }
 
-        
     }
 }

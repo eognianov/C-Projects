@@ -1,18 +1,20 @@
 ﻿using System;
+using BashSoft.Contracts;
 using BashSoft.StaticData;
 
 namespace BashSoft.IO
 {
-    public class InputReader
+    public class InputReader:IReader
     {
         private const string endCommand = "quit";
-        private CommandInterpreter interpreter;
+        private IIntrerpreter interpreter;
 
-        public InputReader(CommandInterpreter interpreter)
+        public InputReader(IIntrerpreter interpreter)
         {
             this.interpreter = interpreter;
         }
-        public void StarReadingCommands()
+
+        public void StartReadingCommands()
         {
             OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
             string input = Console.ReadLine();

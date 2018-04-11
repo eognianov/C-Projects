@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BashSoft.Contracts;
 using BashSoft.IO;
 using BashSoft.StaticData;
 
 namespace BashSoft.Repository
 {
-    public class RepositoryFilter
+    public class RepositoryFilter:IDataFilter
     {
-        //public void FilterAndTake(Dictionary<string, List<int>> wantedData, string wantedFilter, int studentsToTake)
         public void FilterAndTake(Dictionary<string, double> studentsWithMarks, string wantedFilter, int studentsToTake)
         {
             if (wantedFilter =="excellent")
@@ -29,11 +29,10 @@ namespace BashSoft.Repository
             }
         }
 
-        //private void FilterAndTake(Dictionary<string, List<int>> wantedData, Predicate<double> givenFilter, int studentsToTake)
         private void FilterAndTake(Dictionary<string, double> studentsWithMarks, Predicate<double> givenFilter, int studentsToTake)
         {
             int counterForPrinted = 0;
-            //foreach (var userName_Points in wantedData)
+
             foreach (var studentMark in studentsWithMarks)
             {
                 if (counterForPrinted == studentsToTake)

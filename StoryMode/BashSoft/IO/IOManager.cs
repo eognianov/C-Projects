@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.StaticData;
 
 namespace BashSoft.IO
 {
-    public class IOManager
+    public class IOManager:IDirectoryManager
     {
         public void TraverseDirectory(int depth)
         {
@@ -87,6 +88,8 @@ namespace BashSoft.IO
                 ChangeDirectoryAbsolute(currentPath);
             }
         }
+
+        
 
         public void ChangeDirectoryAbsolute(string absolutePath)
         {
