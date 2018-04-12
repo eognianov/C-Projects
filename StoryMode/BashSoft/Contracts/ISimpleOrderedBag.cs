@@ -13,5 +13,9 @@ namespace BashSoft.Contracts
         int Size { get; }
 
         string JoinWith(string joiner);
+
+        bool Remove(T element);
+
+        int Capacity { get; }
     }
 }

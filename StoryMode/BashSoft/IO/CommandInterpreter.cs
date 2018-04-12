@@ -2,7 +2,10 @@
 using System.Data;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
+using System.Reflection;
+using BashSoft.Attributes;
 using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.IO.Commands;
@@ -25,6 +28,7 @@ namespace BashSoft.IO
             this.repository = repository;
             this.inputOutputManager = inputOutputManager;
         }
+
         public void InterpredCommand(string input)
         {
             string[] data = input.Split(' ');
@@ -40,53 +44,41 @@ namespace BashSoft.IO
             {
                 OutputWriter.DisplayException(ex.Message);
             }
-
-
         }
 
         private IExecutable ParseCommand(string input, string command, string[] data)
         {
-            switch (command)
+            object[] parametersForConstruction = new object[]
             {
-                case "open":
-                    return new OpenFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "mkdir":
-                    return new MakeDirectoryCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "ls":
-                    return new TraverseFoldersCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "cmp":
-                    return new CompareFilesCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "cdRel":
-                    return new ChangeRelativePathCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "cdAbs":
-                    return new ChangeAbsolutePathCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "readDb":
-                    return new ReadDatabaseCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "help":
-                    return new GetHelpCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "show":
-                    return new ShowCourseCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "filter":
-                    return new PrintFilteredStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "order":
-                    return new PrintOrderedStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "display":
-                    return new DisplayCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                //case "decOrder":
-                //    break;
-                //case "download":
-                //    break;
-                //case "downloadAsynch":
-                //    break;
-                case "dropdb":
-                    return new OpenFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                default:
-                    throw new InvalidCommandException(input);
-                    
-            }
-        }
+                input, data
+            };
 
-        
+            Type typeOfCommand = Assembly.GetExecutingAssembly().GetTypes().First(type =>
+                type.GetCustomAttributes(typeof(AliasAttribute)).Where(atr => atr.Equals(command)).ToArray().Length >
+                0);
+
+            Type typeOfInterpreter = typeof(CommandInterpreter);
+
+            Command exe = (Command) Activator.CreateInstance(typeOfCommand, typeOfInterpreter);
+
+            FieldInfo[] fieldsOfCommand = typeOfCommand.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+            FieldInfo[] fieldsOfInterpreter =
+                typeOfInterpreter.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+
+            foreach (var fieldOfCommand in fieldsOfCommand)
+            {
+                Attribute atrAttribute = fieldOfCommand.GetCustomAttribute(typeof(InjectAttribute));
+                if (atrAttribute!=null)
+                {
+                    if (fieldsOfInterpreter.Any(x=>x.FieldType==fieldOfCommand.FieldType))
+                    {
+                        fieldOfCommand.SetValue(exe, fieldsOfInterpreter.First(x=>x.FieldType==fieldOfCommand.FieldType).GetValue(this));
+                    }
+                }
+            }
+
+            return exe;
+        }
 
         private void DownloadFile(string input, string[] data)
         {

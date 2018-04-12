@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BashSoft.Attributes;
 using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.Judge;
@@ -8,9 +9,10 @@ using BashSoft.Repository;
 
 namespace BashSoft.IO.Commands
 {
+    [Alias("help")]
     class GetHelpCommand:Command
     {
-        public GetHelpCommand(string input, string[] data, IConterComparer judge, IDatabase repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
+        public GetHelpCommand(string input, string[] data) : base(input, data)
         {
         }
 

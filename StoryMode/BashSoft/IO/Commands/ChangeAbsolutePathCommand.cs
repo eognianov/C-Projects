@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BashSoft.Attributes;
 using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.Judge;
@@ -8,9 +9,13 @@ using BashSoft.Repository;
 
 namespace BashSoft.IO.Commands
 {
+    [Alias("cdabs")]
     class ChangeAbsolutePathCommand:Command
     {
-        public ChangeAbsolutePathCommand(string input, string[] data, IConterComparer judge, IDatabase repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
+        [Inject]
+        private IDirectoryManager inputOutputManager;
+
+        public ChangeAbsolutePathCommand(string input, string[] data) : base(input, data)
         {
         }
 
@@ -19,7 +24,7 @@ namespace BashSoft.IO.Commands
             if (this.Data.Length == 2)
             {
                 string absolutePath = this.Data[1];
-                this.InputOutputManager.ChangeDirectoryAbsolute(absolutePath);
+                this.inputOutputManager.ChangeDirectoryAbsolute(absolutePath);
             }
             else
             {

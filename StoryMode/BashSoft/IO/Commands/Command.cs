@@ -13,18 +13,10 @@ namespace BashSoft.IO.Commands
         private string input;
         private string[] data;
 
-        private IConterComparer judge;
-        private IDatabase repository;
-        private IDirectoryManager inputOutputManager;
-
-
-        public Command(string input, string[] data, IConterComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
+        public Command(string input, string[] data)
         {
             this.Input = input;
             this.Data = data;
-            this.judge = judge;
-            this.repository = repository;
-            this.inputOutputManager = inputOutputManager;
         }
 
         protected string Input
@@ -63,21 +55,6 @@ namespace BashSoft.IO.Commands
 
                 this.data = value;
             }
-        }
-
-        protected IConterComparer Judge
-        {
-            get { return this.judge; }
-        }
-
-        protected IDatabase Repository
-        {
-            get { return this.repository; }
-        }
-
-        protected IDirectoryManager InputOutputManager
-        {
-            get { return this.inputOutputManager; }
         }
 
         public abstract void Execute();

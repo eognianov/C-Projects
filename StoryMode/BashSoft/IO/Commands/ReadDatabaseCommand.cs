@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BashSoft.Attributes;
 using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.Judge;
@@ -8,9 +9,11 @@ using BashSoft.Repository;
 
 namespace BashSoft.IO.Commands
 {
+    [Alias("readDb")]
     class ReadDatabaseCommand:Command
     {
-        public ReadDatabaseCommand(string input, string[] data, IConterComparer judge, IDatabase repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
+        [Inject] private IDatabase repository;
+        public ReadDatabaseCommand(string input, string[] data) : base(input, data)
         {
         }
 
@@ -19,7 +22,7 @@ namespace BashSoft.IO.Commands
             if (this.Data.Length == 2)
             {
                 string fileName = this.Data[1];
-                this.Repository.LoadData(fileName);
+                this.repository.LoadData(fileName);
             }
             else
             {

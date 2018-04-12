@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using BashSoft.Attributes;
 using BashSoft.Contracts;
 using BashSoft.Exceptions;
 using BashSoft.Judge;
@@ -10,9 +11,10 @@ using BashSoft.StaticData;
 
 namespace BashSoft.IO.Commands
 {
+    [Alias("open")]
     class OpenFileCommand:Command
     {
-        public OpenFileCommand(string input, string[] data, IConterComparer judge, IDatabase repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
+        public OpenFileCommand(string input, string[] data) : base(input, data)
         {
         }
 

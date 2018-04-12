@@ -7,7 +7,7 @@ using BashSoft.Contracts;
 
 namespace BashSoft.DataStructures
 {
-    class SimpleSortedList<T>:ISimpleOrderedBag<T> where T : IComparable<T>
+    public class SimpleSortedList<T>:ISimpleOrderedBag<T> where T : IComparable<T>
     {
         private const int DefaultSize = 16;
 
@@ -45,6 +45,10 @@ namespace BashSoft.DataStructures
 
         public void Add(T element)
         {
+            if (element==null)
+            {
+                throw  new ArgumentNullException();
+            }
             if (this.innerCollection.Length<=this.size)
             {
                 Resize();
@@ -57,6 +61,10 @@ namespace BashSoft.DataStructures
 
         public void AddAll(ICollection<T> collection)
         {
+            if (collection==null)
+            {
+                throw new ArgumentNullException();
+            }
             if (this.Size+collection.Count>=this.innerCollection.Length)
             {
                 this.MultiResize(collection);
@@ -75,6 +83,11 @@ namespace BashSoft.DataStructures
 
         public string JoinWith(string joiner)
         {
+            if (joiner==null)
+            {
+                throw new ArgumentNullException();
+            }
+
             StringBuilder builder = new StringBuilder();
             foreach (var element in this)
             {
@@ -82,9 +95,44 @@ namespace BashSoft.DataStructures
                 builder.Append(joiner);
             }
 
-            builder.Remove(builder.Length - 1, 1);
+            builder.Remove(builder.Length - joiner.Length, joiner.Length);
             return builder.ToString();
         }
+
+        public bool Remove(T element)
+        {
+            if (element==null)
+            {
+                throw new ArgumentNullException();
+            }
+            bool hasBeenRemoved = false;
+            int indexOfRemovedelement = 0;
+
+            for (int i = 0; i < this.Size; i++)
+            {
+                if (this.innerCollection[i].Equals(element))
+                {
+                    indexOfRemovedelement = i;
+                    this.innerCollection[i] = default(T);
+                    hasBeenRemoved = true;
+                    break;
+                }
+            }
+
+            if (hasBeenRemoved)
+            {
+                for (int i = indexOfRemovedelement; i < this.Size-1; i++)
+                {
+                    this.innerCollection[i] = this.innerCollection[i + 1];
+                }
+
+                this.size--;
+            }
+
+            return hasBeenRemoved;
+        }
+
+        public int Capacity => this.innerCollection.Length;
 
         private void InitializeInnerCollection(int capacity)
         {
