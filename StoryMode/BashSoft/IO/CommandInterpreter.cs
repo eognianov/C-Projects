@@ -53,13 +53,15 @@ namespace BashSoft.IO
                 input, data
             };
 
-            Type typeOfCommand = Assembly.GetExecutingAssembly().GetTypes().First(type =>
-                type.GetCustomAttributes(typeof(AliasAttribute)).Where(atr => atr.Equals(command)).ToArray().Length >
-                0);
+            //Type typeOfCommand = Assembly.GetExecutingAssembly().GetTypes().First(type =>
+            //type.GetCustomAttributes(typeof(AliasAttribute)).Where(atr => atr.Equals(command)).ToArray().Length >
+            //0);
+
+            Type typeOfCommand = Assembly.GetExecutingAssembly().GetTypes().First(t => t.GetCustomAttributes(typeof(AliasAttribute)).Where(a => a.Equals(command)).ToArray().Length > 0);
 
             Type typeOfInterpreter = typeof(CommandInterpreter);
 
-            Command exe = (Command) Activator.CreateInstance(typeOfCommand, typeOfInterpreter);
+            Command exe = (Command) Activator.CreateInstance(typeOfCommand, parametersForConstruction);
 
             FieldInfo[] fieldsOfCommand = typeOfCommand.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
             FieldInfo[] fieldsOfInterpreter =
