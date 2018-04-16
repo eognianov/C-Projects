@@ -1,32 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Forum.App.ViewModels
+﻿namespace Forum.App.Models.ViewModels
 {
-    public abstract class ContentViewModel
-    {
-        private const int LineLegnth = 37;
+    using Contracts;
+    using System.Collections.Generic;
+    using System.Linq;
 
-        protected ContentViewModel(string text)
+    public class ContentViewModel : IContentViewModel
+    {
+        private const int lineLength = 37;
+
+        public ContentViewModel(string content)
         {
-            this.Content = this.GetLines(text);
+            this.Content = this.GetLines(content);
         }
 
         public string[] Content { get; }
 
-        private string[] GetLines(string text)
+        private string[] GetLines(string content)
         {
-            char[] contentChars = text.ToCharArray();
+            var textAsCharArr = content.ToCharArray();
 
             ICollection<string> lines = new List<string>();
 
-            for (int i = 0; i < contentChars.Length; i+=LineLegnth)
+            for (int i = 0; i < content.Length; i++)
             {
-                char[] lineChars = contentChars.Skip(i).Take(LineLegnth).ToArray();
-                string line = string.Join("", lineChars);
-                lines.Add(line);
+                var currentLine = textAsCharArr
+                    .Skip(i * lineLength)
+                    .Take(lineLength)
+                    .ToArray();
+
+                var lineAsText = string.Join(string.Empty, currentLine);
+
+                lines.Add(lineAsText);
             }
 
             return lines.ToArray();

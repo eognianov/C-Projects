@@ -1,46 +1,53 @@
-﻿using Forum.App.Models;
-using Forum.App.Services;
-using Forum.Data;
-
-namespace Forum.App
+﻿namespace Forum.App
 {
-	using System;
+    using Contracts;
+    using Factories;
+    using Forum.App.Models;
+    using Forum.App.Services;
+    using Forum.Data;
+    using Microsoft.Extensions.DependencyInjection;
+    using System;
 
-	using Microsoft.Extensions.DependencyInjection;
-
-	using Contracts;
-	using Factories;
-
-	public class StartUp
+    public class StartUp
 	{
 		public static void Main(string[] args)
 		{
-		    IServiceProvider serviceProvider = ConfigureServices();
-		    IMainController menu = serviceProvider.GetService<IMainController>();
+            IServiceProvider serviceProvider = ConfigureServices();
+            IMainController menu = serviceProvider.GetService<IMainController>();
 
-			Engine engine = new Engine(menu);
-			engine.Run();
-		}
+            Engine engine = new Engine(menu);
+            engine.Run();
+        }
 
 		private static IServiceProvider ConfigureServices()
 		{
-			IServiceCollection services = new ServiceCollection();
+            IServiceCollection services = new ServiceCollection();
 
-		    services.AddSingleton<ICommandFactory, CommandFactory>();
-		    services.AddSingleton<ILabelFactory, LabelFactory>();
-		    services.AddSingleton<IMenuFactory, MenuFactory>();
-		    services.AddSingleton<ITextAreaFactory, TextAreaFactory>();
+            #region Factory Services
+            services.AddSingleton<ITextAreaFactory, TextAreaFactory>();
+            services.AddSingleton<ILabelFactory, LabelFactory>();
+            services.AddSingleton<IMenuFactory, MenuFactory>();
+            services.AddSingleton<ICommandFactory, CommandFactory>();
+            #endregion
 
-		    services.AddTransient<IUserService, UserService>();
-		    services.AddTransient<IPostService, PostService>();
-		    services.AddSingleton<ForumData>();
+            #region Database Services
+            services.AddSingleton<ForumData>();
+            services.AddTransient<IPostService, PostService>();
+            services.AddTransient<IUserService, UserService>();
+            #endregion
 
-		    services.AddSingleton<ISession, Session>();
-		    services.AddSingleton<IMainController, MenuController>();
-		    services.AddSingleton<IForumViewEngine, ForumViewEngine>();
+            #region Other Services
+            services.AddSingleton<ISession, Session>();
+            services.AddSingleton<IForumViewEngine, ForumViewEngine>();
+            services.AddSingleton<IMainController, MenuController>();
 
-		    IServiceProvider serviceProvider = services.BuildServiceProvider();
-		    return serviceProvider;
-		}
-	}
+            services.AddTransient<IForumReader, ForumConsoleReader>();
+            services.AddTransient<ITextInputArea, TextInputArea>();
+            #endregion
+
+            IServiceProvider serviceProvider = services.BuildServiceProvider();
+
+            return serviceProvider;
+        }
+    }
 }

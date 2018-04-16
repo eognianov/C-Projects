@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Forum.App.Contracts;
-using Forum.Data;
-using Forum.DataModels;
-
-namespace Forum.App.Services
+﻿namespace Forum.App.Services
 {
-    public class UserService:IUserService
+    using Contracts;
+    using Forum.App.Common;
+    using Forum.Data;
+    using Forum.DataModels;
+    using System;
+    using System.Linq;
+
+    public class UserService : IUserService
     {
         private ForumData forumData;
         private ISession session;
@@ -18,24 +18,83 @@ namespace Forum.App.Services
             this.session = session;
         }
 
-        public bool TrySignUpUser(string username, string password)
+        public User GetUserById(int userId)
         {
-            throw new NotImplementedException();
-        }
+            var user = this.forumData
+                .Users
+                .FirstOrDefault(u => u.Id == userId);
 
-        public bool TryLogInUser(string username, string password)
-        {
-            throw new NotImplementedException();
+            // TODO: Throw if null...
+
+            return user;
         }
 
         public string GetUserName(int userId)
         {
-            throw new NotImplementedException();
+            var username = this.forumData
+                .Users
+                .FirstOrDefault(u => u.Id == userId)
+                ?.Username;
+            
+            // TODO: Throw if null...
+            
+            return username;
         }
 
-        public User GetUserById(int userId)
+        public bool TryLogInUser(string username, string password)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                return false;
+            }
+
+            var user = this.forumData
+                .Users
+                .FirstOrDefault(u => u.Username == username && u.Password == password);
+
+            if (user == null)
+            {
+                return false;
+            }
+
+            this.session.Reset();
+            this.session.LogIn(user);
+
+            return true;
+        }
+
+        public bool TrySignUpUser(string username, string password)
+        {
+            var isUsernameValid = !string.IsNullOrWhiteSpace(username) && username.Length > Constants.UsernameAndPassowrdMinLength;
+
+            var isPasswordValid = !string.IsNullOrWhiteSpace(password) && password.Length > Constants.UsernameAndPassowrdMinLength;
+
+            var isValid = isUsernameValid && isPasswordValid;
+
+            if (!isValid)
+            {
+                throw new ArgumentException(Constants.InvalidUsernameOrPasswordLength);
+            }
+
+            var userAlreadyExist = this.forumData.Users.Any(u => u.Username == username);
+
+            if (userAlreadyExist)
+            {
+                throw new InvalidOperationException(Constants.UsernameTakenError);
+            }
+
+            var userId = this.forumData.Users.Any()
+                ? this.forumData.Users.Max(u => u.Id) + 1
+                : 1;
+
+            var user = new User(userId, username, password);
+
+            this.forumData.Users.Add(user);
+            this.forumData.SaveChanges();
+
+            this.TryLogInUser(username, password);
+
+            return true;
         }
     }
 }

@@ -1,30 +1,40 @@
 ﻿namespace Forum.App.Menus
 {
-	using System.Collections.Generic;
-	using System.Linq;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
-	using Contracts;
-	using Models;
+    using Contracts;
+    using Forum.App.Common;
+    using Models;
 
-	public class ViewCategoryMenu : Menu, IIdHoldingMenu, IPaginatedMenu
+    public class ViewCategoryMenu : Menu, IIdHoldingMenu, IPaginatedMenu
 	{
-		private const int pageSize = 10;
-		private const int categoryNameLength = 36;
-
 		private ILabelFactory labelFactory;
 		private IPostService postService;
+        private ICommandFactory commandFactory;
 
 		private int categoryId;
 		private int currentPage;
 		private IPostInfoViewModel[] posts;
 
-		//TODO: Inject Dependencies
+        public ViewCategoryMenu(
+            ILabelFactory labelFactory, 
+            IPostService postService, 
+            ICommandFactory commandFactory)
+        {
+            this.labelFactory = labelFactory;
+            this.postService = postService;
+            this.commandFactory = commandFactory;
 
-		private int LastPage => throw new System.NotImplementedException();
+            //this.Open();
+        }
 
-		private bool IsFirstPage => throw new System.NotImplementedException();
+        private int LastPage => this.posts.Length / 11;
 
-		private bool IsLastPage => throw new System.NotImplementedException();
+        private bool IsFirstPage => this.currentPage == 0;
+
+        private bool IsLastPage => this.currentPage == this.LastPage;
 
 		protected override void InitializeStaticLabels(Position consoleCenter)
 		{
@@ -56,9 +66,9 @@
                 new Position(consoleCenter.Left + 10, consoleCenter.Top + 12), // Next Page
             };
 
-			Position[] categoryButtonPositions = new Position[pageSize];
+			Position[] categoryButtonPositions = new Position[Constants.PageSize];
 
-			for (int i = 0; i < pageSize; i++)
+			for (int i = 0; i < Constants.PageSize; i++)
 			{
 				categoryButtonPositions[i] = new Position(consoleCenter.Left - 18, consoleCenter.Top - 8 + i * 2);
 			}
@@ -70,7 +80,7 @@
 			{
 				IPostInfoViewModel post = null;
 
-				int categoryIndex = i + this.currentPage * pageSize;
+				int categoryIndex = i + this.currentPage * Constants.PageSize;
 
 				if (categoryIndex < this.posts.Length)
 				{
@@ -78,7 +88,7 @@
 				}
 
 				string postsCount = post?.ReplyCount.ToString();
-				string buffer = new string(' ', categoryNameLength - post?.Title.Length ?? 0 - postsCount?.Length ?? 0);
+				string buffer = new string(' ', Constants.CategoryNameLength - post?.Title.Length ?? 0 - postsCount?.Length ?? 0);
 				string buttonText = post?.Title + buffer + postsCount;
 
 				IButton button = this.labelFactory.CreateButton(buttonText, categoryButtonPositions[i], post == null);
@@ -94,17 +104,54 @@
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
-		}
+            var currentOptionText = string.Join(string.Empty, this.CurrentOption.Text.Split());
+            
+            var actualIndex = this.currentPage * 10 + this.currentIndex - 1;
+
+            string postId = null;
+
+            var menuName = actualIndex >= 0 && actualIndex < 10
+                ? nameof(ViewPostMenu)
+                : currentOptionText;
+
+            if (menuName == nameof(ViewPostMenu))
+            {
+                postId = this.posts[actualIndex].Id.ToString();
+            }
+
+            var command = this.commandFactory.CreateCommand(menuName);
+
+            var view = command.Execute(postId);
+
+            return view;
+        }
 
 		public void ChangePage(bool forward = true)
 		{
-			throw new System.NotImplementedException();
-		}
+            this.currentPage += forward ? 1 : -1;
+
+            this.currentIndex = 0;
+
+            this.Open();
+        }
 
 		public void SetId(int id)
 		{
-			throw new System.NotImplementedException();
+            this.categoryId = id;
+
+            this.Open();
 		}
-	}
+
+        public override void Open()
+        {
+            this.LoadPosts();
+
+            base.Open();
+        }
+
+        private void LoadPosts()
+        {
+            this.posts = this.postService.GetCategoryPostsInfo(this.categoryId).ToArray();
+        }
+    }
 }

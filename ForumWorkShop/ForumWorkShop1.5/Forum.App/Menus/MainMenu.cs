@@ -1,19 +1,20 @@
 ﻿namespace Forum.App.Menus
 {
 	using Contracts;
-	using Models;
+    using Forum.App.Common;
+    using Models;
 
     public class MainMenu : Menu
     {
 		private ISession session;
 		private ILabelFactory labelFactory;
-        private ICommandFactory commandFactory;
+        ICommandFactory commandFactory;
 
 		public MainMenu(ISession session, ILabelFactory labelFactory, ICommandFactory commandFactory)
         {
             this.session = session;
-			this.labelFactory = labelFactory;
             this.commandFactory = commandFactory;
+            this.labelFactory = labelFactory;
 
             this.Open();
         }
@@ -71,11 +72,13 @@
 
 		public override IMenu ExecuteCommand()
 		{
-		    string commandName = string.Join("", this.CurrentOption.Text.Split()) + "Menu";
+            var commandName = string.Join(string.Empty, this.CurrentOption.Text.Split()) + Constants.MenuSuffix;
 
-		    ICommand command = commandFactory.CreateCommand(commandName);
+            var command = this.commandFactory.CreateCommand(commandName);
 
-		    return command.Execute();
+            var view = command.Execute();
+
+            return view;
 		}
     }
 }

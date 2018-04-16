@@ -8,7 +8,7 @@
 
     internal static class DataMapper
 	{
-		private const string DATA_PATH = "../../../../data/";
+		private const string DATA_PATH = "../data/";
 		private const string CONFIG_PATH = "config.ini";
 		private const string DEFAULT_CONFIG = "users=users.csv\r\ncategories=categories.csv\r\nposts=posts.csv\r\nreplies=replies.csv";
 

@@ -10,8 +10,13 @@
 	{
 		public ITextInputArea CreateTextArea(IForumReader reader, int x, int y, bool isPost = true)
 		{
-			Assembly assembly = Assembly.GetExecutingAssembly();
-			Type commandType = assembly.GetTypes().FirstOrDefault(t => typeof(ITextInputArea).IsAssignableFrom(t));
+            var commandType = Assembly
+                .GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => t.GetInterfaces()
+                    .Contains(typeof(ITextInputArea))
+                    && !t.IsAbstract)
+                .FirstOrDefault();
 
 			if (commandType == null)
 			{

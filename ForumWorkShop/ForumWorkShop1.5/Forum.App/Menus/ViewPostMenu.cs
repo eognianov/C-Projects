@@ -5,23 +5,38 @@
 
 	using Models;
 	using Contracts;
+    using Forum.App.Common;
 
-	public class ViewPostMenu : Menu, IIdHoldingMenu
+    public class ViewPostMenu : Menu, IIdHoldingMenu//, IPaginatedMenu
 	{
 		private const int leftOffset = 18;
 		private const int topOffset = 7;
 
 		private ILabelFactory labelFactory;
 		private ISession session;
-
 		private IForumViewEngine viewEngine;
-		
+        ICommandFactory commandFactory;
+        IPostService postService;
+
 		private int postId;
 		private IPostViewModel post;
 
-		//TODO: Inject Dependencies
 
-		public override void Open()
+        public ViewPostMenu(
+            ILabelFactory labelFactory, 
+            ISession session, 
+            IForumViewEngine viewEngine, 
+            ICommandFactory commandFactory, 
+            IPostService postService)
+        {
+            this.labelFactory = labelFactory;
+            this.session = session;
+            this.viewEngine = viewEngine;
+            this.commandFactory = commandFactory;
+            this.postService = postService;
+        }
+        
+        public override void Open()
 		{		
 			this.LoadPost();
 			this.ExtendBuffer();
@@ -99,18 +114,34 @@
 
 		public void SetId(int id)
 		{
-			throw new System.NotImplementedException();
+            this.postId = id;
+
+            this.Open();
 		}
 
 		private void LoadPost()
 		{
-			throw new System.NotImplementedException();
+            this.post = this.postService.GetPostViewModel(this.postId);
 		}
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
-		}
+            var currentOptionText = this.CurrentOption.Text == "Back"
+                ? this.CurrentOption.Text
+                : string.Join(string.Empty, this.CurrentOption.Text.Split()) + Constants.MenuSuffix;
+
+            var actualIndex = this.currentIndex;
+            
+            var menuName = actualIndex > 1
+                ? nameof(ViewPostMenu)
+                : currentOptionText;
+            
+            var command = this.commandFactory.CreateCommand(menuName);
+
+            var view = command.Execute(this.postId.ToString());
+            
+            return view;
+        }
 
 		private void ExtendBuffer()
 		{
@@ -126,5 +157,14 @@
 				viewEngine.SetBufferHeight(totalLines);
 			}
 		}
-	}
+
+        //public void ChangePage(bool forward = true)
+        //{
+        //    this.currentPage += forward ? 1 : -1;
+
+        //    this.currentIndex = 0;
+
+        //    this.Open();
+        //}
+    }
 }

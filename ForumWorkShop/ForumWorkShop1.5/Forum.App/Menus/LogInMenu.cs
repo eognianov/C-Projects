@@ -1,40 +1,38 @@
 ﻿namespace Forum.App.Menus
 {
-	using Models;
+    using Common;
     using Contracts;
+    using Models;
+    using System;
 
     public class LogInMenu : Menu
     {
-		private const string errorMessage = "Invalid username or password!";
-
-		private bool error;
-
 		private ILabelFactory labelFactory;
         private ICommandFactory commandFactory;
-        private ISession session;
-        private IUserService userService;
+        IForumReader forumReader;
 
-        public LogInMenu(ILabelFactory labelFactory, ICommandFactory commandFactory, ISession session, IUserService userService)
+        public LogInMenu(ILabelFactory labelFactory, ICommandFactory commandFactory, IForumReader forumReader)
         {
             this.labelFactory = labelFactory;
             this.commandFactory = commandFactory;
-            this.session = session;
-            this.userService = userService;
+            this.forumReader = forumReader;
 
             this.Open();
         }
-		
-		private string UsernameInput => this.Buttons[0].Text.TrimStart();
+
+        private bool error;
+            
+        private string UsernameInput => this.Buttons[0].Text.TrimStart();
 
 		private string PasswordInput => this.Buttons[1].Text.TrimStart();
 
 		protected override void InitializeStaticLabels(Position consoleCenter)
         {
-            string[] labelContents = new string[] { errorMessage, "Name:", "Password:" };
+            string[] labelContents = new string[] { Constants.UserSignDetailsError, "Name:", "Password:" };
 
             Position[] labelPositions = new Position[]
             {
-				new Position(consoleCenter.Left - errorMessage.Length / 2, consoleCenter.Top - 13),   // Error: 
+				new Position(consoleCenter.Left - Constants.UserSignDetailsError.Length / 2, consoleCenter.Top - 13),   // Error: 
                 new Position(consoleCenter.Left - 16, consoleCenter.Top - 10),   // Name:
                 new Position(consoleCenter.Left - 16, consoleCenter.Top - 8),    // Password:
             };
@@ -76,7 +74,35 @@
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
-		}
+            if (this.CurrentOption.IsField)
+            {
+                var left = this.CurrentOption.Position.Left + 1;
+                var top = this.CurrentOption.Position.Top;
+
+                var fieldInput = " " + this.forumReader.ReadLine(left, top);
+
+                this.Buttons[this.currentIndex] = this.labelFactory
+                    .CreateButton(fieldInput, this.CurrentOption.Position, this.CurrentOption.IsHidden, this.CurrentOption.IsField);
+
+                return this;
+            }
+
+            try
+            {
+                var commandName = string.Join(string.Empty, this.CurrentOption.Text.Split());
+
+                var command = this.commandFactory.CreateCommand(commandName);
+
+                var view = command.Execute(this.UsernameInput, this.PasswordInput);
+
+                return view;
+            }
+            catch (Exception)
+            {
+                this.error = true;
+                this.Open();
+                return this;
+            }
+        }
 	}
 }

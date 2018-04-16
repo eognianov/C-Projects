@@ -1,45 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using Forum.App.Contracts;
-
-namespace Forum.App.Factories
+﻿namespace Forum.App.Factories
 {
-    public class MenuFactory:IMenuFactory
+    using Forum.App.Contracts;
+    using System;
+    using System.Linq;
+    using System.Reflection;
+
+    public class MenuFactory : IMenuFactory
     {
+        private const string MenuNotFoundErrorMsg = "Menu not found!";
+        private const string NotAMenuErrorMsg = "{0} is not a menu!";
+
         private IServiceProvider serviceProvider;
 
         public MenuFactory(IServiceProvider serviceProvider)
         {
             this.serviceProvider = serviceProvider;
         }
-
+        
         public IMenu CreateMenu(string menuName)
         {
-            Type menuType = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(t => t.Name == menuName);
+            var menuType = Assembly
+                .GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => !t.IsAbstract)
+                .FirstOrDefault(t => t.Name == menuName)
+                ?? throw new InvalidOperationException(MenuNotFoundErrorMsg);
 
-            if (menuType==null)
+            var isMenu = typeof(IMenu).IsAssignableFrom(menuType);
+
+            if (!isMenu)
             {
-                throw new ArgumentException($"{menuName} not found!");
+                throw new InvalidOperationException(string.Format(NotAMenuErrorMsg, menuName));
             }
 
-            if (!typeof(IMenu).IsAssignableFrom(menuType))
-            {
-                throw new InvalidOperationException($"{menuName} is not a IMenu");
-            }
+            var parameters = menuType
+                .GetConstructors()
+                .First()
+                .GetParameters()
+                .Select(p => this.serviceProvider.GetService(p.ParameterType))
+                .ToArray();
 
-            ParameterInfo[] ctorParams = menuType.GetConstructors().First().GetParameters();
-
-            object[] arguments = new object[ctorParams.Length];
-
-            for (int i = 0; i < arguments.Length; i++)
-            {
-                arguments[i] = this.serviceProvider.GetService(ctorParams[i].ParameterType);
-            }
-
-            IMenu menu = (IMenu)Activator.CreateInstance(menuType, ctorParams);
+            var menu = (IMenu)Activator.CreateInstance(menuType, parameters);
 
             return menu;
         }

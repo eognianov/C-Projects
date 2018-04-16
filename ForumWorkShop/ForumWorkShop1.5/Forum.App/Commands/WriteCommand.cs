@@ -2,20 +2,21 @@
 
 namespace Forum.App.Models.Commands
 {
-    public class BackCommand : ICommand
+    public class WriteCommand : ICommand
     {
         private ISession session;
 
-        public BackCommand(ISession session)
+        public WriteCommand(ISession session)
         {
             this.session = session;
         }
 
         public IMenu Execute(params string[] args)
         {
-            var menu = this.session.Back();
+            var currentMenu = (ITextAreaMenu)this.session.CurrentMenu;
+            currentMenu.TextArea.Write();
 
-            return menu;
+            return currentMenu;
         }
     }
 }

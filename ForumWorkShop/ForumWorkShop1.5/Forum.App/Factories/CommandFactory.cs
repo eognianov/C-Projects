@@ -1,47 +1,49 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-
-namespace Forum.App.Factories
+﻿namespace Forum.App.Factories
 {
 	using Contracts;
+    using Forum.App.Common;
+    using System;
+    using System.Linq;
+    using System.Reflection;
 
-	public class CommandFactory : ICommandFactory
+    public class CommandFactory : ICommandFactory
 	{
-	    private IServiceProvider serviceProvider;
+        private const string NotACommandErrorMsg = "{0} is not a command!";
+        private const string CommandNotFoundErrorMsg = "Command not found!";
 
-	    public CommandFactory(IServiceProvider serviceProvider)
-	    {
-	        this.serviceProvider = serviceProvider;
-	    }
+        private IServiceProvider serviceProvider;
+
+        public CommandFactory(IServiceProvider serviceProvider)
+        {
+            this.serviceProvider = serviceProvider;
+        }
 
 		public ICommand CreateCommand(string commandName)
 		{
-			Assembly assembly = Assembly.GetExecutingAssembly();
-		    Type commandType = assembly.GetTypes().FirstOrDefault(t => t.Name == commandName + "Command");
+            var commandType = Assembly
+                .GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => !t.IsAbstract)
+                .FirstOrDefault(t => t.Name == $"{commandName}{Constants.CommandSuffix}")
+                ?? throw new InvalidOperationException(CommandNotFoundErrorMsg);
 
-		    if (commandType==null)
-		    {
-		        throw new ArgumentException($"{commandName}Command not found!");
-		    }
+            var isCommand = typeof(ICommand).IsAssignableFrom(commandType);
 
-		    if (!typeof(ICommand).IsAssignableFrom(commandType))
-		    {
-		        throw new InvalidOperationException($"{commandName}Command is not an ICommand!");
-		    }
+            if (!isCommand)
+            {
+                throw new InvalidOperationException(string.Format(NotACommandErrorMsg, commandName));
+            }
 
-		    ParameterInfo[] ctorParams = commandType.GetConstructors().First().GetParameters();
+            var parameters = commandType
+                .GetConstructors()
+                .First()
+                .GetParameters()
+                .Select(p => this.serviceProvider.GetService(p.ParameterType))
+                .ToArray();
 
-            object[] arguments = new object[ctorParams.Length];
+            var command = (ICommand)Activator.CreateInstance(commandType, parameters);
 
-		    for (int i = 0; i < arguments.Length; i++)
-		    {
-		        arguments[i] = this.serviceProvider.GetService(ctorParams[i].ParameterType);
-		    }
-
-		    ICommand command = (ICommand) Activator.CreateInstance(commandType, arguments);
-
-		    return command;
+            return command;
 		}
 	}
 }

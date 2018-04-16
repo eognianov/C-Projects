@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Forum.App.Contracts;
-
-namespace Forum.App.ViewModels
+﻿namespace Forum.App.Models.ViewModels
 {
-    public class ReplyViewModel:ContentViewModel,IReplyViewModel
+    using Contracts;
+
+    public class ReplyViewModel : ContentViewModel, IReplyViewModel
     {
-        public ReplyViewModel(string author, string text) : base(text)
+        public ReplyViewModel(string author, string content) 
+            : base(content)
         {
             this.Author = author;
         }

@@ -1,66 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Forum.App.Models
+﻿namespace Forum.App.Models
 {
 	using Contracts;
 	using DataModels;
+    using Forum.App.Menus;
+    using System.Collections.Generic;
+    using System.Linq;
 
-	public class Session : ISession
+    public class Session : ISession
 	{
-	    private User user;
-	    private Stack<IMenu> history;
+        private User user;
+        private Stack<IMenu> history;
 
-	    public Session()
-	    {
-	        this.history = new Stack<IMenu>();
-	    }
+        public Session()
+        {
+            this.history = new Stack<IMenu>();
+        }
 
-	    public string Username => this.user?.Username;
+        public string Username => this.user?.Username;
 
-	    public int UserId => this.user?.Id ?? 0;
+        public int UserId => this.user?.Id ?? 0;
 
-	    public bool IsLoggedIn => this.user != null;
+        public bool IsLoggedIn => this.user != null;
 
-		public IMenu CurrentMenu => this.history.Peek();
+        public IMenu CurrentMenu => this.history.Peek();
 
 		public IMenu Back()
 		{
-		    if (history.Count>1)
-		    {
-		        this.history.Pop();
-		    }
+            if (this.history.Count > 1)
+            {
+                this.history.Pop();
+            }
 
-		    this.CurrentMenu.Open();
-		    return this.CurrentMenu;
+            var previousMenu = this.history.Peek();
+            previousMenu.Open();
+
+            return previousMenu;
 		}
 
-		public void LogIn(User user)
-		{
-		    this.user = user;
-		}
+        public void LogIn(User user) => this.user = user;
 
-		public void LogOut()
-		{
-		    this.user = null;
-		}
+        public void LogOut() => this.user = null;
 
 		public bool PushView(IMenu view)
 		{
-		    if (!this.history.Any() || this.history.Peek()!=view)
-		    {
-		        this.history.Push(view);
-		        return true;
-		    }
+            if (!this.history.Any() || this.history.Peek() != view)
+            {
+                this.history.Push(view);
+                return true;
+            }
 
-		    return false;
+            return false;
 		}
 
 		public void Reset()
 		{
-			this.history = new Stack<IMenu>();
-            this.user = null;
+            this.history.Clear();
+            this.LogOut();
 		}
 	}
 }

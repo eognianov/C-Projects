@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Forum.App.Contracts;
-
-namespace Forum.App.ViewModels
+﻿namespace Forum.App.Models.ViewModels
 {
-    public class PostViewModel:ContentViewModel,IPostViewModel
+    using Contracts;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class PostViewModel : ContentViewModel, IPostViewModel
     {
-        public PostViewModel(string title, string author, string text, IEnumerable<IReplyViewModel> replies) : base(text)
+        public PostViewModel(string title, string author, string content, IEnumerable<IReplyViewModel> replies) 
+            : base(content)
         {
             this.Title = title;
             this.Author = author;
@@ -20,6 +19,5 @@ namespace Forum.App.ViewModels
         public string Author { get; }
 
         public IReplyViewModel[] Replies { get; }
-    
     }
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Forum.App.Contracts;
-
-namespace Forum.App.ViewModels
+﻿namespace Forum.App.Models.ViewModels
 {
-    public class CategoryInfoViewModel:ICategoryInfoViewModel
+    using Contracts;
+
+    public class CategoryInfoViewModel : ICategoryInfoViewModel
     {
         public CategoryInfoViewModel(int id, string name, int postCount)
         {
@@ -13,8 +10,11 @@ namespace Forum.App.ViewModels
             this.Name = name;
             this.PostCount = postCount;
         }
+
         public int Id { get; }
+
         public string Name { get; }
+
         public int PostCount { get; }
     }
 }
