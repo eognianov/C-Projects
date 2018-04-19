@@ -1,12 +1,6 @@
-﻿namespace Last_Army
+﻿public class Helmet:Ammunition
 {
-    public class Helmet
-    {
-        public const double Weight = 2.3;
+    private const double weight = 2.3;
 
-        public Helmet(string name) 
-            : base (name, Weight)
-        {
-        }
-    }
+    public override double Weight => weight;
 }

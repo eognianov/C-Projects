@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace Last_Army.IO
+
+public class ConsoleReader:IReader
 {
-    static class ConsoleReader
+    public string ReadLine()
     {
-        public static string ReadLine()
-        {
-            return Console.ReadLine();
-        }
+        return Console.ReadLine();
     }
 }
+

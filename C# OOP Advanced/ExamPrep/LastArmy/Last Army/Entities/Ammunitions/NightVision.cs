@@ -1,12 +1,7 @@
-﻿namespace Last_Army
+﻿public class NightVision:Ammunition
 {
-    public class NightVision
-    {
-        public const double Weight = 0.8;
+    private const double weight = 0.8;
 
-        public NightVision(string name)
-            : base (name, Weight)
-        {
-        }
-    }
+
+    public override double Weight => weight;
 }

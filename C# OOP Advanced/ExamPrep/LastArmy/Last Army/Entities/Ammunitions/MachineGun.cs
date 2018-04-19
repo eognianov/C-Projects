@@ -1,12 +1,7 @@
-﻿namespace Last_Army
+﻿public class MachineGun:Ammunition
 {
-    public class MachineGun
-    {
-        public const double Weight = 10.6;
+    private const double weight = 10.6;
 
-        public MachineGun(string name)
-            : base(name, Weight)
-        {
-        }
-    }
+
+    public override double Weight => weight;
 }
