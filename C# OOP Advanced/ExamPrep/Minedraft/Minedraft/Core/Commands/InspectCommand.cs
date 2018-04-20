@@ -25,7 +25,7 @@ public class InspectCommand : Command
 
         if (entity==null)
         {
-            return string.Join(Constants.EntityNotFound, id);
+            return string.Format(Constants.EntityNotFound, id);
         }
 
         return entity.ToString();

@@ -8,7 +8,7 @@
 
     public const string EnergyOutputToday = "Produced {0} energy today!";
 
-    public const string ModeChange = "Mode changed to {0}";
+    public const string ModeChange = "Mode changed to {0}!";
 
     public const string DefaultMode = "Full";
 
