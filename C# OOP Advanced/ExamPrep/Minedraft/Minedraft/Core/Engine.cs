@@ -4,45 +4,30 @@ using System.Linq;
 
 public class Engine
 {
-    private DraftManager manager;
+    private ICommandInterpreter commandInterpreter;
+    private IReader reader;
+    private IWriter writer;
 
-    public Engine()
+    public Engine(ICommandInterpreter commandInterpreter, IReader reader, IWriter writer)
     {
-        this.manager = new DraftManager();
+        this.commandInterpreter = commandInterpreter;
+        this.reader = reader;
+        this.writer = writer;
     }
 
     public void Run()
     {
         while (true)
         {
-            var input = Console.ReadLine();
-            var data = input.Split().ToList();
-            var command = data[0];
-            switch (command)
+            List<string> inputArgs = reader.ReadLine().Split().ToList();
+
+            string result = commandInterpreter.ProcessCommand(inputArgs);
+
+            writer.WriteLine(result);
+
+            if (inputArgs[0]=="Shutdown")
             {
-                case "RegisterHarvester":
-                    var args = new List<string>(data.Skip(1).ToList());
-                    manager.RegisterHarvester(args);
-                    break;
-                case "RegisterProvider":
-                    args = new List<string>(data.Skip(1).ToList());
-                    manager.RegisterProvider(args);
-                    break;
-                case "Day":
-                    manager.Day();
-                    break;
-                case "Mode":
-                    args = new List<string>(data.Skip(1).ToList());
-                    manager.Mode(args);
-                    break;
-                case "Check":
-                    args = new List<string>(data.Skip(1).ToList());
-                    //Console.WriteLine(manager.Check(args));
-                    break;
-                default:
-                    manager.ShutDown();
-                    Environment.Exit(0);
-                    break;
+                break;
             }
         }
     }

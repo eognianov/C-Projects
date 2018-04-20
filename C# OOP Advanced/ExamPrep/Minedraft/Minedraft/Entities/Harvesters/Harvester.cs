@@ -1,9 +1,13 @@
-﻿public abstract class Harvester
+﻿using System;
+
+public abstract class Harvester:IHarvester
 {
     private const int InitialDurability = 1000;
     
-    private double oreOutput;
-    private double energyRequirement;
+    //private double oreOutput;
+    //private double energyRequirement;
+
+    private double durability;
 
     protected Harvester(int id, double oreOutput, double energyRequirement)
     {
@@ -19,5 +23,32 @@
 
     public double EnergyRequirement { get; protected set; }
 
-    public virtual double Durability { get; protected set; }
+    public virtual double Durability
+    {
+        get { return this.durability;}
+        protected set {
+            if (value<0)
+            {
+                throw new ArgumentException(string.Format(Constants.BrokenEntity, this.GetType().Name, this.ID));
+            }
+
+            this.durability = value;
+        }
+    }
+
+    public double Produce()
+    {
+        return this.OreOutput;
+    }
+
+    public void Broke()
+    {
+        this.Durability -= Constants.DurabilityDecrease;
+        
+    }
+
+    public override string ToString()
+    {
+        return this.GetType().Name + Environment.NewLine + $"Durability: {this.Durability}";
+    }
 }

@@ -3,6 +3,7 @@
 public class InfinityHarvester : Harvester
 {
     private const int OreOutputDivider = 10;
+    private const int PermanentDurability = 1000;
 
     private double durability;
 
@@ -14,6 +15,6 @@ public class InfinityHarvester : Harvester
     public override double Durability
     {
         get => this.durability;
-        protected set => this.durability = Math.Max(0, value);
+        protected set => this.durability = PermanentDurability;
     }
 }
