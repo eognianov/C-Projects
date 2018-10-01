@@ -17,3 +17,5 @@ bin
 /-Copy.gitignore
 *.txt
 *.zip
+DesignTimeBuild
+*.dtbcache
