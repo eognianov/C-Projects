@@ -2,7 +2,7 @@
 {
     using System.IO;
     using HTTP.Enums;
-    using Http.Response.Contracts;
+    using HTTP.Responses.Contracts;
     using WebServer.Results;
 
     public class HomeController

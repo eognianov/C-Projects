@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
-
-namespace SIS.Http.Exceptions
+﻿namespace SIS.HTTP.Exceptions
 {
-    public class BadRequestException:Exception
+    using System;
+    using Common;
+
+    public class BadRequestException : Exception
     {
-        private const string errorMessage = "The Request was malformed or contains unsupported elements.";
-
-        public const HttpStatusCode StatusCode = HttpStatusCode.BadRequest;
-
-        public BadRequestException():base(errorMessage)
+        public BadRequestException()
+            : base(GlobalConstans.BadRequestMessage)
         {
-            
         }
     }
 }

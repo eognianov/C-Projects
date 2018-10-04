@@ -1,6 +1,6 @@
 ﻿namespace SIS.Demo
 {
-    using Http.Enums;
+    using HTTP.Enums;
     using WebServer;
     using WebServer.Routing;
 

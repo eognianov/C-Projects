@@ -2,8 +2,8 @@
 {
     using System.Text;
     using HTTP.Enums;
-    using Http.Headers;
-    using Http.Response;
+    using HTTP.Headers;
+    using HTTP.Responses;
 
     public class HtmlResult : HttpResponse
     {

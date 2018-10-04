@@ -1,11 +1,9 @@
-﻿using SIS.HTTP.Enums;
-
-namespace SIS.WebServer.Results
+﻿namespace SIS.WebServer.Results
 {
     using System.Text;
-    using Http.Enums;
-    using Http.Headers;
-    using Http.Response;
+    using HTTP.Enums;
+    using HTTP.Headers;
+    using HTTP.Responses;
 
     public class TextResult : HttpResponse
     {

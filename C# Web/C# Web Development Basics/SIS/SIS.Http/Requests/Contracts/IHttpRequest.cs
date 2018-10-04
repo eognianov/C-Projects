@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using SIS.Http.Enums;
-using SIS.Http.Headers.Contracts;
-
-namespace SIS.Http.Requests.Contracts
+﻿namespace SIS.HTTP.Requests.Contracts
 {
+    using System.Collections.Generic;
+    using Cookies.Contracts;
+    using Enums;
+    using Headers.Contracts;
+    using Sessions.Contracts;
+
     public interface IHttpRequest
     {
         string Path { get; }
@@ -17,9 +16,12 @@ namespace SIS.Http.Requests.Contracts
 
         Dictionary<string, object> QueryData { get; }
 
+        IHttpHeaderCollection Headers { get; }
+
         HttpRequestMethod RequestMethod { get; }
 
-        IHttpHeadersCollection HeadersCollection { get; }
+        IHttpCookieCollection Cookies { get; }
 
+        IHttpSession Session { get; set; }
     }
 }

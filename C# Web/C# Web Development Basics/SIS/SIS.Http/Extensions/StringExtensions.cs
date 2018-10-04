@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SIS.Http.Extensions
+﻿namespace SIS.HTTP.Extensions
 {
     public static class StringExtensions
     {
-        public static string Capitalize(this string input)
+        public static string Capitalize(this string message)
         {
-            if (string.IsNullOrEmpty(input))
-            {
-                throw new ArgumentException($"{nameof(input)} cannot be null");
-            }
-            return char.ToUpper(input[0]) + input.Substring(1).ToLower();
+            var firstLetter = message[0].ToString().ToUpper();
+            var allOther = message.Substring(1).ToLower();
+
+            return $"{firstLetter}{allOther}";
         }
     }
 }

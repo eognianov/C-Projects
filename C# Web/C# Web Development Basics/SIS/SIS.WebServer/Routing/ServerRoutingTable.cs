@@ -2,9 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
-    using SIS.Http.Enums;
-    using SIS.Http.Requests.Contracts;
-    using Http.Response.Contracts;
+    using HTTP.Enums;
+    using HTTP.Requests.Contracts;
+    using HTTP.Responses.Contracts;
 
     public class ServerRoutingTable
     {
