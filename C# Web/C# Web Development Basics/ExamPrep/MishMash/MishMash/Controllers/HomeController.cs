@@ -11,13 +11,20 @@ namespace MishMash.Controllers
         [HttpGet("/Home/Index")]
         public IHttpResponse Index()
         {
-            return this.View("Home/Index");
+            if (this.User!=null)
+            {
+                return this.View("Home/LoggedInIndex");
+            }
+            else
+            {
+                return this.View("Home/Index");
+            }
         }
 
         [HttpGet("/")]
         public IHttpResponse RootIndex()
         {
-            return this.View("Home/Index");
+            return this.Index();
         }
     }
 }
