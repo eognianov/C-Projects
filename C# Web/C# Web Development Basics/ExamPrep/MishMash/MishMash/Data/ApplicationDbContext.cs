@@ -11,6 +11,7 @@ namespace MishMash.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Channel> Channels { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<UserInChannel> UserInChannel { get; set; }
 
 
         public ApplicationDbContext()
